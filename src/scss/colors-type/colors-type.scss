@@ -1,0 +1,100 @@
+.logo {
+    margin-top: 30px;
+}
+
+.colors-type {
+    &__inner {
+       margin-top: 64px; 
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__color-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        &:first-child {
+            margin-top: 0px;
+        }
+    }
+    &__square {
+        width: 70px;
+        height: 70px;
+        margin-right: 40px;
+        border-radius: 6px;
+        &-text {
+            display: flex;
+            flex-direction: column;
+            span {
+                &:last-child {
+                    font-weight: 400;
+                    margin-top: 10px;
+                }
+            }
+        }
+        &_shade100 {
+            background-color: #1F2041;
+        }
+        &_shade75 {
+            background-color: rgba(31, 32, 65, 0.75);
+        }
+        &_shade50 {
+            background-color: rgba(31, 32, 65, 0.5);
+        }
+        &_shade25 {
+            background-color: rgba(31, 32, 65, 0.25);
+        }
+        &_shade5 {
+            background-color: rgba(31, 32, 65, 0.05);
+        }
+        &_purple {
+            background-color: #BC9CFF;
+        }
+        &_green {
+            background-color: #6FCF97;
+        }
+    }
+    &__titles-content {
+        max-width: 39%;
+    }
+    &__title {
+        color: rgba(31, 32, 65, 0.25);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        margin-right: 30px;
+        text-align: right;
+        min-width: 40px;
+        &-block {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 51px;
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+        &_h1 {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        &_h2 {
+            font-size: 19px;
+            line-height: 23px;
+        }
+        &_h3 {
+            font-size: 12px;;
+            line-height: 15px;
+        }
+        &_body {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+@import "./titles.scss";

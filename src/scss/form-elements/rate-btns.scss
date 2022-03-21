@@ -1,0 +1,25 @@
+.rate-btns {
+    &__wrapper {
+        display: flex;
+    }
+    &__block {
+        display: flex;
+        &:last-child {
+            margin-left: 15px;
+        }
+    }
+    &__star-bg, &__star {
+        height: 20px;
+        width: 20px;
+        background-image: url("../assets/images/star-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: 3px;
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+    &__star {
+        background-image: url("../assets/images/star.svg");
+    }
+}

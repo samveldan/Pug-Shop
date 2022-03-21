@@ -1,0 +1,163 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/main.css")
+    body 
+        section.colors-type
+            .container__wrapper
+                .logo
+                    img(src="assets/images/logo.png", alt="")
+                .colors-type__inner
+                    .container__content
+                        .colors-type__content
+                            .colors-type__colors
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_shade100
+                                    .colors-type__square-text
+                                        span Dark Shade 100%
+                                        span #1F2041
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_shade75
+                                    .colors-type__square-text
+                                        span Dark Shade 75%
+                                        span #1F2041
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_shade50
+                                    .colors-type__square-text
+                                        span Dark Shade 50%
+                                        span #1F2041
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_shade25
+                                    .colors-type__square-text
+                                        span Dark Shade 25%
+                                        span #1F2041
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_shade5
+                                    .colors-type__square-text
+                                        span Dark Shade 5%
+                                        span #1F2041
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_purple
+                                    .colors-type__square-text
+                                        span Purple
+                                        span #BC9CFF
+                                .colors-type__color-block
+                                    .colors-type__square.colors-type__square_green
+                                    .colors-type__square-text
+                                        span Green
+                                        span #6FCF97
+                            .colors-type__titles-content
+                                .colors-type__title-block
+                                    .colors-type__title.colors-type__title_h1 H1
+                                    p.colors-type__p.h1-styles This one is the sub-section or widget title
+                                .colors-type__title-block
+                                    .colors-type__title.colors-type__title_h2 H2
+                                    p.colors-type__p.h2-styles Next one is the item title inside widgets
+                                .colors-type__title-block
+                                    .colors-type__title.colors-type__title_h3 H3
+                                    p.colors-type__p.h3-styles This is a label or CTA text
+                                .colors-type__title-block
+                                    .colors-type__title.colors-type__title_body Body
+                                    p.colors-type__p.all-styles This is the body text which is used for most of the design, like paragraphs, lists, etc.
+        section.form-elements
+            .container__wrapper
+                .logo
+                    img(src="assets/images/logo.png", alt="")
+                .container__content
+                    .form-elements__content
+                        .form-elements__text-field
+                            .form-elements__title-block.input-block
+                                h3.h3-styles text field
+                                input(type="text", placeholder="Email").form-elements__input.input.input-textfield
+                            .form-elements__title-block.input-block
+                                h3.h3-styles text field
+                                input(type="text", placeholder="Email", value="This is pretty awesome").form-elements__input.form-elements__input_focus.input.input-textfield
+                            .form-elements__title-block.input-block
+                                h3.h3-styles dropdown
+                                .input-block__dropdown.dropdown-block
+                                    input(type="button", value="Сколько гостей").form-elements__input.input.input-dropdown
+                                    img(src="assets/images/arrow.svg", alt="")
+                            .form-elements__title-block.input-block
+                                h3.h3-styles masked text field
+                                input(type="text", placeholder="ДД.ММ.ГГ").form-elements__input.input.input-textfield
+                            .form-elements__title-block.form-elements__dropdowns.input-block
+                                .form-elements__block
+                                    h3.h3-styles date dropdown
+                                    .input-block__dropdown.dropdown-block
+                                        input(type="button", value="ДД.ММ.ГГ").form-elements__input.input.input-dropdown
+                                        img(src="assets/images/arrow.svg", alt="")
+                                .form-elements__block
+                                    h3.h3-styles date dropdown
+                                    .input-block__dropdown.dropdown-block
+                                        input(type="button", value="19.08.2019").form-elements__input.input.input-dropdown
+                                        img(src="assets/images/arrow.svg", alt="")
+                            .form-elements__title-block.form-elements__filter.input-block
+                                h3.h3-styles filter date dropdown
+                                .input-block__dropdown.dropdown-block
+                                    input(type="button", value="19 авг - 23 авг").form-elements__input.input.input-dropdown
+                                    img(src="assets/images/arrow.svg", alt="")
+                            .form-elements__title-block.form-elements__sub.input-block
+                                h3.h3-styles subscription text field
+                                .sub-block
+                                    input(type="text", placeholder="Email").form-elements__input.input.input-textfield
+                                    img(src="assets/images/sub-arrow.svg", alt="")
+                        .form-elements__buttons
+                            .form-elements__checkbox.checkbox-block
+                                h3.h3-styles checkbox buttons
+                                .checkbox-block__elems
+                                    .checkbox-block__elem
+                                        input(type="checkbox", id="smoke")
+                                        label(for="smoke").all-styles  Можно курить                                    
+                                    .checkbox-block__elem
+                                        input(type="checkbox", id="animals")
+                                        label(for="animals").all-styles  Можно с питомцами      
+                                    .checkbox-block__elem
+                                        input(type="checkbox", id="guests")
+                                        label(for="guests").all-styles  Можно пригласить гостей (до 10 человек)
+                            .form-elements__radiobtns.radio-btns
+                                h3.h3-styles.form-elements__radio-h3 radio buttons
+                                .radio-btns__wrapper
+                                    .radio-btns__block
+                                        input(type="radio", id="male", name="sex")
+                                        label(for="male") Мужчина
+                                    .radio-btns__block
+                                        input(type="radio", id="female", name="sex")
+                                        label(for="female") Женщина
+                            .form-elements__togglebtns.toggle-btns
+                                h3.h3-styles.form-elements__toggle-h3 toggle
+                                .toggle-btns__wrapper
+                                    .toggle-btns__block
+                                        input(type="checkbox", id="spec-1")
+                                        label(for="spec-1") Получать спецпредложения
+                                    .toggle-btns__block
+                                        input(type="checkbox", id="spec-2")
+                                        label(for="spec-2") Получать спецпредложения
+                            .form-elements__likes.like-btns
+                                h3.h3-styles like button
+                                .like-btns__wrapper
+                                    button.like-btns__block
+                                        div.like-btns_svg
+                                        span.like-btns__count 2
+                                    button.like-btns__block
+                                        div.like-btns_svg
+                                        span.like-btns__count 12
+                            .form-elements__rate-btns.rate-btns
+                                h3.h3-styles rate button
+                                .form-elements__rate-wrapper.rate-btns__wrapper
+                                    .rate-btns__block
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star 
+                                    .rate-btns__block
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg 
+                                        .rate-btns__star-bg
+

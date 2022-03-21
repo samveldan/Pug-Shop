@@ -1,0 +1,32 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "fonts/fonts.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container__wrapper {
+    max-width: 1380px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container__content {
+    max-width: 1160px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@import "./colors-type/colors-type.scss";
+@import "./form-elements/form-elements.scss";
