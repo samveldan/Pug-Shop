@@ -32,7 +32,7 @@
         max-width: 270px;
     }
     &__text-field {
-        width: 100%;
+        width: 29%;
     }
     &__radio-h3 {
         margin-bottom: 15px;
@@ -41,16 +41,28 @@
         margin-top: 20px;
     }
     &__togglebtns {
-        margin-top: 25px;
+        margin-top: 37px;
     }
     &__likes {
-        margin-top: 35px;
+        margin-top: 46px;
     }
     &__rate-btns {
         margin-top: 40px;
     }
     &__rate-wrapper {
         margin-top: 15px;
+    }
+    &__slider-text {
+        margin-bottom: 20px;
+    }
+    &__buttons {
+        width: 24%;
+    }
+    &__morebtns {
+        width: 27.7%;
+    }
+    &__pagination {
+        margin-top: 40px;
     }
 }
 
@@ -60,3 +72,6 @@
 @import "./toggle-btns.scss";
 @import "./like-btns.scss";
 @import "./rate-btns.scss";
+@import "./range-slider.scss";
+@import "./buttons-block.scss";
+@import "./pagination-block.scss";
