@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./js/index.js":
-/*!*********************!*\
-  !*** ./js/index.js ***!
-  \*********************/
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ \"./scss/style.scss\");\n\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ \"./scss/style.scss\");\n/* harmony import */ var _js_components_form_elements_dropdown_block_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/components/form-elements/dropdown-block.js */ \"./js/components/form-elements/dropdown-block.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./js/components/form-elements/dropdown-block.js":
+/*!*******************************************************!*\
+  !*** ./js/components/form-elements/dropdown-block.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Dropdown)\n/* harmony export */ });\nclass Dropdown {\r\n    constructor(blocks) {\r\n        this.blocks = blocks;\r\n\r\n        this.setListener(this.blocks);\r\n        this.setOpenItems(this.blocks);\r\n    }\r\n\r\n    setListener(items) {\r\n        items.forEach(element => {\r\n            let top = this.findTopBlock(element);\r\n\r\n            top.addEventListener(\"click\", (e) => {\r\n                let selectionBlock = element.querySelector(\".selection\");\r\n                let currentHeight = selectionBlock.firstElementChild.clientHeight;\r\n\r\n                if(!element.classList.contains(\"active\")) {\r\n                    selectionBlock.style.height = currentHeight + \"px\";\r\n                }\r\n                else selectionBlock.style.height = 0 + \"px\";\r\n\r\n                element.classList.toggle(\"active\");\r\n            });\r\n        });\r\n    }\r\n\r\n    setOpenItems(items) {\r\n        items.forEach(element => {\r\n            let selectionBlock = element.querySelector(\".selection\");\r\n            let currentHeight = selectionBlock.firstElementChild.clientHeight;\r\n\r\n            if(element.classList.contains(\"active\")) {\r\n                selectionBlock.style.height = currentHeight + \"px\";\r\n            }\r\n        });\r\n    }\r\n\r\n    findTopBlock(element) {\r\n        for(let i = 0; i < element.children.length; i++) {\r\n            if(element.children[i].className.includes(\"top\")) {\r\n                return element.children[i];\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nconst dropdownAll = document.querySelectorAll(\".dropdown-block__dropdown\");\r\nnew Dropdown(dropdownAll);\r\n\r\nconst expandchecksAll = document.querySelectorAll(\".expand-checkbox\");\r\nnew Dropdown(expandchecksAll);\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./js/components/form-elements/dropdown-block.js?");
 
 /***/ })
 
@@ -57,6 +67,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -73,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./js/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
 /******/ 	
 /******/ })()
 ;

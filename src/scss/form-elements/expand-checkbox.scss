@@ -1,0 +1,28 @@
+.expand-checkbox {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &__top {
+        position: relative;
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 13px;
+        }
+    }
+    .selection {
+        margin-top: 0px;
+    }
+    &.active {
+        .selection {
+            margin-top: 15px;
+        }
+        img {
+            transform: translateY(-50%) rotate(180deg)
+        }
+    }
+}

@@ -7,7 +7,7 @@ module.exports = {
     context : path.resolve(__dirname, "src"),
     mode : "development",
     entry : {
-        main : "./js/index.js"
+        main : "./index.js"
     },
     output : {
         filename : "[name].bundle.js",
@@ -32,6 +32,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
               { from: "./assets", to: "assets" },
+              { from: "./js/components", to: "js/components" },
             ],
           }),
         new MiniCssExtractPlugin({

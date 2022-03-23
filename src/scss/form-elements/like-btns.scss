@@ -35,6 +35,13 @@
                 background-image: url("../assets/images/like-bg.svg");
             }
         }
+        &.active {
+            color: #BC9CFF;
+            border-color: #BC9CFF;
+            & > div {
+                background-image: url("../assets/images/like-bg.svg");
+            }
+        }
         &:last-child {
             margin-left: 10px;
         }

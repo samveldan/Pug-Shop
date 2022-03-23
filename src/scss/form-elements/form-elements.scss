@@ -64,6 +64,44 @@
     &__pagination {
         margin-top: 40px;
     }
+    &__js {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        &-block:nth-child(2) {
+            margin-top: 20px;
+        }
+        &-wrapper {
+            &:nth-child(1) {
+                width: 23%;
+            }
+            &:nth-child(2) {
+                width: 27%;
+                margin-left: 106px;
+            }
+            &:nth-child(3) {
+                width: 27.5%;
+            }
+        }
+    }
+    &__checkbox-block {
+        margin-top: 53px;
+    }
+    &__rich-checkbox, &__bullet {
+        margin-top: 105px;
+    }
+    &__footer {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_left-block {
+            width: 24%;
+        }
+        &_right-block {
+            width: 62%;
+        }
+    }
 }
 
 @import "./input-styles.scss";
@@ -75,3 +113,9 @@
 @import "./range-slider.scss";
 @import "./buttons-block.scss";
 @import "./pagination-block.scss";
+@import "./dropdown-block.scss";
+@import "./expand-checkbox.scss";
+@import "./rich-checkbox.scss";
+@import "./bullet-list.scss";
+@import "./smiles-block.scss";
+@import "./comments-block.scss";
