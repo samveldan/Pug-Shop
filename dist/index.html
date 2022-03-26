@@ -79,7 +79,7 @@
               </div>
               <div class="form-elements__title-block input-block">
                 <h3 class="h3-styles">text field</h3>
-                <input class="form-elements__input form-elements__input_focus input input-textfield" type="text" placeholder="Email" value="This is pretty awesome">
+                <input class="form-elements__input input form-elements__input_focus input-textfield" type="text" value="This is pretty awesome">
               </div>
               <div class="form-elements__title-block input-block">
                 <h3 class="h3-styles">dropdown</h3>
@@ -140,7 +140,7 @@
                 <h3 class="h3-styles form-elements__radio-h3">radio buttons</h3>
                 <div class="radio-btns__wrapper">
                   <div class="radio-btns__block">
-                    <input type="radio" id="male" name="sex">
+                    <input type="radio" id="male" name="sex" checked="checked">
                     <label for="male">Мужчина</label>
                   </div>
                   <div class="radio-btns__block">
@@ -197,9 +197,14 @@
               <div class="form-elements__range-slider range-slider">
                 <div class="range-slider__wrapper">
                   <div class="form-elements__slider-text range-slider__text">
-                    <h3 class="h3-styles">range slider</h3><span class="range-slider__price">5 000Р - 10 000Р</span>
+                    <h3 class="h3-styles">range slider</h3>
+                    <div class="range-slider__price"> <span>5 000Р </span><span>- </span><span>10 000Р</span></div>
                   </div>
-                  <div class="range-slider__slider"><img src="assets/images/range-slider.svg" alt=""></div>
+                  <div class="range-slider__slider">
+                    <div class="range-slider__slider-track"></div>
+                    <input type="range" id="range-1" min="100" max="17000" value="5000" step="100">
+                    <input type="range" id="range-2" min="100" max="17000" value="10000" step="100">
+                  </div>
                 </div>
               </div>
               <div class="form-elements__buttons-block buttons-block">
@@ -211,7 +216,7 @@
                   <button class="buttons-block_fourth buttons-block_move">click me</button>
                   <button class="buttons-block_fifth buttons-block_move">click me</button>
                   <button class="buttons-block_sixth buttons-block_move">click me</button>
-                  <button class="buttons-block__payment buttons-block_move"><span>Перейти к оплате</span><img src="assets/images/white-arrow.svg" alt=""></button>
+                  <button class="buttons-block__payment buttons-block_move arrow-btn"><span>Перейти к оплате</span><img src="assets/images/white-arrow.svg" alt=""></button>
                 </div>
               </div>
               <div class="form-elements__pagination pagination-block">
@@ -255,7 +260,7 @@
                       <div class="dropdown-block__option">
                         <h3 class="h3-styles">ванные комнаты</h3>
                         <div class="dropdown-block__option-nums">
-                          <div>-</div><span class="h3-styles">0</span>
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
                           <div>+</div>
                         </div>
                       </div>
@@ -288,7 +293,7 @@
                       <div class="dropdown-block__option">
                         <h3 class="h3-styles">ванные комнаты</h3>
                         <div class="dropdown-block__option-nums">
-                          <div>-</div><span class="h3-styles">0</span>
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
                           <div>+</div>
                         </div>
                       </div>
@@ -374,21 +379,21 @@
                     <div class="dropdown-block__option">
                       <h3 class="h3-styles">взрослые</h3>
                       <div class="dropdown-block__option-nums">
-                        <div>-</div><span class="h3-styles">0</span>
+                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
                         <div>+</div>
                       </div>
                     </div>
                     <div class="dropdown-block__option">
                       <h3 class="h3-styles">дети</h3>
                       <div class="dropdown-block__option-nums">
-                        <div>-</div><span class="h3-styles">0</span>
+                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
                         <div>+</div>
                       </div>
                     </div>
                     <div class="dropdown-block__option">
                       <h3 class="h3-styles">младенцы</h3>
                       <div class="dropdown-block__option-nums">
-                        <div>-</div><span class="h3-styles">0</span>
+                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
                         <div>+</div>
                       </div>
                     </div>
@@ -427,7 +432,7 @@
               <div class="dropdown-block__dropdown active">
                 <h3 class="h3-styles">dropdown</h3>
                 <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
-                  <input class="form-elements__input input input-dropdown" type="button" value="Сколько гостей"><img src="assets/images/arrow.svg" alt="">
+                  <input class="form-elements__input input input-dropdown" type="button" value="3 гостя"><img src="assets/images/arrow.svg" alt="">
                 </div>
                 <div class="dropdown-block__selection selection">
                   <div class="dropdown-block__selection-wrapper">
@@ -448,7 +453,7 @@
                     <div class="dropdown-block__option">
                       <h3 class="h3-styles">младенцы</h3>
                       <div class="dropdown-block__option-nums">
-                        <div>-</div><span class="h3-styles">0</span>
+                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
                         <div>+</div>
                       </div>
                     </div>
@@ -508,9 +513,190 @@
                     Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
                     И стены, действительно, шумоподавляющие. 
                     Выкрикивал комплименты повару — никто не жаловался из соседей.
-                    
-                    
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards">
+      <div class="container__wrapper">
+        <div class="logo"><img src="assets/images/logo.png" alt=""></div>
+        <div class="container__content">
+          <div class="cards__content">       
+            <div class="cards__block">
+              <div class="find-room cards__find-room">
+                <h1 class="h1-styles">Найдём номера под ваши пожелания</h1>
+                <div class="find-room__dates">
+                  <div class="find-room__date">
+                    <h3 class="h3-styles">прибытие</h3>
+                    <div class="dropdown-block">
+                      <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="find-room__date">
+                    <h3 class="h3-styles">выезд</h3>
+                    <div class="dropdown-block">
+                      <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-block__dropdown find-room__guests">
+                  <h3 class="h3-styles">гости</h3>
+                  <div class="input-block__dropdown dropdown-block top">
+                    <input class="form-elements__input input input-dropdown" type="button" value="Сколько гостей"><img src="assets/images/arrow.svg" alt="">
+                  </div>
+                  <div class="dropdown-block__selection selection">
+                    <div class="dropdown-block__selection-wrapper">
+                      <div class="dropdown-block__option">
+                        <h3 class="h3-styles">взрослые</h3>
+                        <div class="dropdown-block__option-nums">
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                          <div>+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-block__option">
+                        <h3 class="h3-styles">дети</h3>
+                        <div class="dropdown-block__option-nums">
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                          <div>+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-block__option">
+                        <h3 class="h3-styles">младенцы</h3>
+                        <div class="dropdown-block__option-nums">
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                          <div>+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-block__btns">
+                        <div class="dropdown-block__use clean">очистить</div>
+                        <div class="dropdown-block__use use">применить</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="find-room__btn">
+                  <button class="arrow-btn"><span>Подобрать номер</span><img src="assets/images/white-arrow.svg" alt=""></button>
+                </div>
+              </div>
+              <div class="cards__signup signup">
+                <h1 class="h1-styles">Регистрация аккаунта</h1>
+                <div class="signup__name">
+                  <input class="input" placeholder="Имя">
+                  <input class="input" placeholder="Фамилия">
+                </div>
+                <div class="radio-btns__wrapper signup__radio-btns">
+                  <div class="radio-btns__block">
+                    <input type="radio" id="male-main" name="sex-main" checked="checked">
+                    <label for="male-main">Мужчина</label>
+                  </div>
+                  <div class="radio-btns__block">
+                    <input type="radio" id="female-main" name="sex-main">
+                    <label for="female-main">Женщина</label>
+                  </div>
+                </div>
+                <div class="signup__date">
+                  <h3 class="h3-styles">дата рождения</h3>
+                  <div class="dropdown-block">
+                    <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
+                  </div>
+                </div>
+                <div class="signup__info">
+                  <h3 class="h3-styles">данные для входа в сервис</h3>
+                  <input class="input" placeholder="Email">
+                  <input class="input" placeholder="Пароль">
+                  <div class="toggle-btns__block signup__toggle-btns">
+                    <input type="checkbox" id="spec-main">
+                    <label for="spec-main">Получать спецпредложения</label>
+                  </div>
+                </div>
+                <button class="arrow-btn signup__btn"><span>Перейти к оплате</span><img src="assets/images/white-arrow.svg" alt=""></button>
+                <div class="check-account signup__check"><span>Уже есть аккаунт на Toxin</span>
+                  <button class="buttons-block_third">войти</button>
+                </div>
+              </div>
+            </div>
+            <div class="cards__block">
+              <div class="cards__booking booking">
+                <div class="booking__top">
+                  <div class="booking__top-block">
+                    <div>№ <span>888</span> <span>люкс</span></div>
+                    <div>9 990P <span>в сутки</span></div>
+                  </div>
+                </div>
+                <div class="booking__dates">
+                  <div class="booking__date">
+                    <h3 class="h3-styles">прибытие</h3>
+                    <div class="dropdown-block">
+                      <input class="input input-dropdown" type="button" value="19.08.2019"><img src="assets/images/arrow.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="booking__date">
+                    <h3 class="h3-styles">выезд</h3>
+                    <div class="dropdown-block">
+                      <input class="input input-dropdown" type="button" value="23.08.2019"><img src="assets/images/arrow.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-block__dropdown booking__guests">
+                  <h3 class="h3-styles">гости</h3>
+                  <div class="input-block__dropdown dropdown-block top">
+                    <input class="form-elements__input input input-dropdown" type="button" value="3 гостя"><img src="assets/images/arrow.svg" alt="">
+                  </div>
+                  <div class="dropdown-block__selection selection">
+                    <div class="dropdown-block__selection-wrapper">
+                      <div class="dropdown-block__option">
+                        <h3 class="h3-styles">взрослые</h3>
+                        <div class="dropdown-block__option-nums">
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">2</span>
+                          <div>+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-block__option">
+                        <h3 class="h3-styles">дети</h3>
+                        <div class="dropdown-block__option-nums">
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">1</span>
+                          <div>+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-block__option">
+                        <h3 class="h3-styles">младенцы</h3>
+                        <div class="dropdown-block__option-nums">
+                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                          <div>+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-block__btns">
+                        <div class="dropdown-block__use clean">очистить</div>
+                        <div class="dropdown-block__use use">применить</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="booking__info">
+                  <div class="booking__info-block"><span>9 990₽ х 4 суток</span><span>39 960P</span></div>
+                  <div class="booking__info-block"><span>Сбор за услуги: скидка 2 179₽</span><span class="booking__svg"><img src="assets/images/mark.svg"></span><span>0P</span></div>
+                  <div class="booking__info-block"><span>Сбор за дополнительные <br> услуги</span><span class="booking__svg"><img src="assets/images/mark.svg"></span><span>300P</span></div>
+                </div>
+                <div class="booking__price"><span>Итого</span><span class="dots"> </span><span>38 081P</span></div>
+                <div class="booking__btn">
+                  <button class="arrow-btn"><span>Забронировать</span><img src="assets/images/white-arrow.svg" alt=""></button>
+                </div>
+              </div>
+              <div class="cards__signin signin">
+                <h1 class="h1-styles">Войти</h1>
+                <div class="signin__auth">
+                  <input class="input" placeholder="Email">
+                  <input class="input" placeholder="Пароль">
+                </div>
+                <div class="signin__btn">
+                  <button class="arrow-btn"><span>Войти</span><img src="assets/images/white-arrow.svg" alt=""></button>
+                </div>
+                <div class="check-account signin__check"><span>Нет аккаунта на Toxin?</span>
+                  <button class="buttons-block_third">создать</button>
                 </div>
               </div>
             </div>

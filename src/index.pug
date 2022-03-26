@@ -75,7 +75,7 @@ html(lang="en")
                                 input(type="text", placeholder="Email").form-elements__input.input.input-textfield
                             .form-elements__title-block.input-block
                                 h3.h3-styles text field
-                                input(type="text", placeholder="Email", value="This is pretty awesome").form-elements__input.form-elements__input_focus.input.input-textfield
+                                input(type="text", value="This is pretty awesome").form-elements__input.input.form-elements__input_focus.input-textfield
                             .form-elements__title-block.input-block
                                 h3.h3-styles dropdown
                                 .input-block__dropdown.dropdown-block
@@ -122,7 +122,7 @@ html(lang="en")
                                 h3.h3-styles.form-elements__radio-h3 radio buttons
                                 .radio-btns__wrapper
                                     .radio-btns__block
-                                        input(type="radio", id="male", name="sex")
+                                        input(type="radio", id="male", name="sex", checked)
                                         label(for="male") Мужчина
                                     .radio-btns__block
                                         input(type="radio", id="female", name="sex")
@@ -165,9 +165,14 @@ html(lang="en")
                                 .range-slider__wrapper
                                     .form-elements__slider-text.range-slider__text
                                         h3.h3-styles range slider
-                                        span.range-slider__price 5 000Р - 10 000Р
+                                        div.range-slider__price 
+                                            span 5 000Р 
+                                            span - 
+                                            span 10 000Р
                                     .range-slider__slider
-                                        img(src="assets/images/range-slider.svg", alt="")
+                                        .range-slider__slider-track
+                                        input(type="range", id="range-1", min=100, max=17000, value=5000, step=100)
+                                        input(type="range", id="range-2", min=100, max=17000, value=10000, step=100)
                             .form-elements__buttons-block.buttons-block
                                 h3.buttons-block__h3.h3-styles buttons
                                 .buttons-block__block
@@ -177,7 +182,7 @@ html(lang="en")
                                     button.buttons-block_fourth.buttons-block_move click me
                                     button.buttons-block_fifth.buttons-block_move click me
                                     button.buttons-block_sixth.buttons-block_move click me
-                                    button.buttons-block__payment.buttons-block_move
+                                    button.buttons-block__payment.buttons-block_move.arrow-btn
                                         span Перейти к оплате
                                         img(src="assets/images/white-arrow.svg", alt="")
                             .form-elements__pagination.pagination-block
@@ -216,7 +221,7 @@ html(lang="en")
                                             .dropdown-block__option
                                                 h3.h3-styles ванные комнаты
                                                 .dropdown-block__option-nums
-                                                    div -
+                                                    div.dropdown-block__disabled-btn -
                                                     span.h3-styles 0
                                                     div +
                             .form-elements__js-block
@@ -242,7 +247,7 @@ html(lang="en")
                                             .dropdown-block__option
                                                 h3.h3-styles ванные комнаты
                                                 .dropdown-block__option-nums
-                                                    div -
+                                                    div.dropdown-block__disabled-btn -
                                                     span.h3-styles 0
                                                     div +
                                 .form-elements__checkbox-block.checkbox-block.expand-checkbox
@@ -304,19 +309,19 @@ html(lang="en")
                                         .dropdown-block__option
                                             h3.h3-styles взрослые
                                             .dropdown-block__option-nums
-                                                div -
+                                                div.dropdown-block__disabled-btn -
                                                 span.h3-styles 0
                                                 div +
                                         .dropdown-block__option
                                             h3.h3-styles дети
                                             .dropdown-block__option-nums
-                                                div -
+                                                div.dropdown-block__disabled-btn -
                                                 span.h3-styles 0
                                                 div +
                                         .dropdown-block__option
                                             h3.h3-styles младенцы
                                             .dropdown-block__option-nums
-                                                div -
+                                                div.dropdown-block__disabled-btn -
                                                 span.h3-styles 0
                                                 div +
                                         .dropdown-block__btns
@@ -341,7 +346,7 @@ html(lang="en")
                             .dropdown-block__dropdown.active
                                 h3.h3-styles dropdown
                                 .input-block__dropdown.dropdown-block.dropdown-block__aparts.top
-                                    input(type="button", value="Сколько гостей").form-elements__input.input.input-dropdown
+                                    input(type="button", value="3 гостя").form-elements__input.input.input-dropdown
                                     img(src="assets/images/arrow.svg", alt="")
                                 .dropdown-block__selection.selection
                                     .dropdown-block__selection-wrapper
@@ -360,7 +365,7 @@ html(lang="en")
                                         .dropdown-block__option
                                             h3.h3-styles младенцы
                                             .dropdown-block__option-nums
-                                                div -
+                                                div.dropdown-block__disabled-btn -
                                                 span.h3-styles 0
                                                 div +
                                         .dropdown-block__btns
@@ -408,7 +413,165 @@ html(lang="en")
                                         Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
                                         И стены, действительно, шумоподавляющие. 
                                         Выкрикивал комплименты повару — никто не жаловался из соседей.
-
+        section.cards
+            .container__wrapper
+                .logo
+                    img(src="assets/images/logo.png", alt="")
+                .container__content
+                    .cards__content        
+                        .cards__block
+                            .find-room.cards__find-room
+                                h1.h1-styles Найдём номера под ваши пожелания
+                                .find-room__dates
+                                    .find-room__date
+                                        h3.h3-styles прибытие
+                                        .dropdown-block
+                                            input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
+                                            img(src="assets/images/arrow.svg", alt="")
+                                    .find-room__date
+                                        h3.h3-styles выезд
+                                        .dropdown-block
+                                            input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
+                                            img(src="assets/images/arrow.svg", alt="")      
+                                .dropdown-block__dropdown.find-room__guests
+                                    h3.h3-styles гости
+                                    .input-block__dropdown.dropdown-block.top
+                                        input(type="button", value="Сколько гостей").form-elements__input.input.input-dropdown
+                                        img(src="assets/images/arrow.svg", alt="")
+                                    .dropdown-block__selection.selection
+                                        .dropdown-block__selection-wrapper
+                                            .dropdown-block__option
+                                                h3.h3-styles взрослые
+                                                .dropdown-block__option-nums
+                                                    div.dropdown-block__disabled-btn -
+                                                    span.h3-styles 0
+                                                    div +
+                                            .dropdown-block__option
+                                                h3.h3-styles дети
+                                                .dropdown-block__option-nums
+                                                    div.dropdown-block__disabled-btn -
+                                                    span.h3-styles 0
+                                                    div +
+                                            .dropdown-block__option
+                                                h3.h3-styles младенцы
+                                                .dropdown-block__option-nums
+                                                    div.dropdown-block__disabled-btn -
+                                                    span.h3-styles 0
+                                                    div +
+                                            .dropdown-block__btns
+                                                .dropdown-block__use.clean очистить
+                                                .dropdown-block__use.use применить
+                                .find-room__btn
+                                    button.arrow-btn
+                                        span Подобрать номер
+                                        img(src="assets/images/white-arrow.svg", alt="")
+                            .cards__signup.signup
+                                h1.h1-styles Регистрация аккаунта
+                                .signup__name
+                                    input(placeholder="Имя").input
+                                    input(placeholder="Фамилия").input
+                                .radio-btns__wrapper.signup__radio-btns
+                                    .radio-btns__block
+                                        input(type="radio", id="male-main", name="sex-main", checked)
+                                        label(for="male-main") Мужчина
+                                    .radio-btns__block
+                                        input(type="radio", id="female-main", name="sex-main")
+                                        label(for="female-main") Женщина
+                                .signup__date
+                                    h3.h3-styles дата рождения
+                                    .dropdown-block
+                                        input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
+                                        img(src="assets/images/arrow.svg", alt="")
+                                .signup__info
+                                    h3.h3-styles данные для входа в сервис
+                                    input(placeholder="Email").input
+                                    input(placeholder="Пароль").input
+                                    .toggle-btns__block.signup__toggle-btns
+                                        input(type="checkbox", id="spec-main")
+                                        label(for="spec-main") Получать спецпредложения
+                                button.arrow-btn.signup__btn
+                                    span Перейти к оплате
+                                    img(src="assets/images/white-arrow.svg", alt="")  
+                                .check-account.signup__check
+                                    span Уже есть аккаунт на Toxin
+                                    button.buttons-block_third войти
+                        .cards__block
+                            .cards__booking.booking
+                                .booking__top
+                                    .booking__top-block
+                                        div № <span>888</span> <span>люкс</span>
+                                        div 9 990P <span>в сутки</span>
+                                .booking__dates
+                                    .booking__date
+                                        h3.h3-styles прибытие
+                                        .dropdown-block
+                                            input(type="button", value="19.08.2019").input.input-dropdown
+                                            img(src="assets/images/arrow.svg", alt="")
+                                    .booking__date
+                                        h3.h3-styles выезд
+                                        .dropdown-block
+                                            input(type="button", value="23.08.2019").input.input-dropdown
+                                            img(src="assets/images/arrow.svg", alt="")  
+                                .dropdown-block__dropdown.booking__guests
+                                    h3.h3-styles гости
+                                    .input-block__dropdown.dropdown-block.top
+                                        input(type="button", value="3 гостя").form-elements__input.input.input-dropdown
+                                        img(src="assets/images/arrow.svg", alt="")
+                                    .dropdown-block__selection.selection
+                                        .dropdown-block__selection-wrapper
+                                            .dropdown-block__option
+                                                h3.h3-styles взрослые
+                                                .dropdown-block__option-nums
+                                                    div.dropdown-block__disabled-btn -
+                                                    span.h3-styles 2
+                                                    div +
+                                            .dropdown-block__option
+                                                h3.h3-styles дети
+                                                .dropdown-block__option-nums
+                                                    div.dropdown-block__disabled-btn -
+                                                    span.h3-styles 1
+                                                    div +
+                                            .dropdown-block__option
+                                                h3.h3-styles младенцы
+                                                .dropdown-block__option-nums
+                                                    div.dropdown-block__disabled-btn -
+                                                    span.h3-styles 0
+                                                    div +
+                                            .dropdown-block__btns
+                                                .dropdown-block__use.clean очистить
+                                                .dropdown-block__use.use применить
+                                .booking__info
+                                    .booking__info-block
+                                        span 9 990₽ х 4 суток
+                                        span 39 960P
+                                    .booking__info-block
+                                        span Сбор за услуги: скидка 2 179₽
+                                        <span class="booking__svg"><img src="assets/images/mark.svg"></span>
+                                        span 0P
+                                    .booking__info-block
+                                        span Сбор за дополнительные <br> услуги
+                                        <span class="booking__svg"><img src="assets/images/mark.svg"></span>
+                                        span 300P
+                                .booking__price
+                                    span Итого
+                                    span.dots 
+                                    span 38 081P
+                                .booking__btn
+                                    button.arrow-btn
+                                        span Забронировать
+                                        img(src="assets/images/white-arrow.svg", alt="")
+                            .cards__signin.signin
+                                h1.h1-styles Войти
+                                .signin__auth
+                                    input(placeholder="Email").input
+                                    input(placeholder="Пароль").input
+                                .signin__btn
+                                    button.arrow-btn
+                                        span Войти
+                                        img(src="assets/images/white-arrow.svg", alt="")
+                                .check-account.signin__check
+                                    span Нет аккаунта на Toxin?
+                                    button.buttons-block_third создать
 
         script(src="./main.bundle.js")
 

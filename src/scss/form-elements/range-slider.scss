@@ -13,4 +13,38 @@
         text-transform: uppercase;
         color: rgba(31, 32, 65, 0.5);
     }
+    &__slider {
+        position: relative;
+        input {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            appearance: none;
+            &::-webkit-slider-thumb {
+                appearance: none;
+                cursor: pointer;
+                height: 16px;
+                width: 16px;
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                border: 2px solid #FFFFFF;
+                border-radius: 10px;
+                margin-top: -3px;
+            }
+            &::-webkit-slider-runnable-track {
+                appearance: none;
+                height: 4px;
+            }
+        }
+        &-track {
+            height: 4px;
+            background: #FFFFFF;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
 }

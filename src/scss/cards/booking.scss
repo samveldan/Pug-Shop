@@ -1,0 +1,103 @@
+.booking {
+    padding: 45px 30px;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__top-block {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        color: #1F2041;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        div:first-child {
+            span {
+                &:first-child {
+                    font-size: 24px;
+                }
+                &:last-child {
+                    color: #BC9CFF;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        div:last-child {
+            color: rgba(31, 32, 65, 0.5);
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+    &__dates {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 23px;
+    }
+    &__guests {
+        margin-top: 20px;
+    }
+    &__info {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+        margin-top: 22px;
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-top: 18px;
+            span {
+                &:first-child {
+                    width: 69%;
+                }
+            }
+            &:last-child {
+                span:first-child {
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+    &__svg {
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        height: 17px;
+        width: 17px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+    }
+    &__price {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        color: #1F2041;
+        display: flex;
+        align-items: baseline;
+        margin-top: 32px;
+        .dots {
+            width: 100%;
+            border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+        }
+        span:last-child {
+            width: 43%;
+            text-align: right;
+        }
+    }
+    &__btn {
+        margin-top: 23px;
+        button {
+            width: 100%;
+        }
+    }
+}

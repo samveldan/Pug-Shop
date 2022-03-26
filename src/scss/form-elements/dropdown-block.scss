@@ -1,9 +1,10 @@
 .dropdown-block {
     position: relative;
+    min-width: 150px;
     img {
         position: absolute;
         top: 50%;
-        transform: translateY(-20%);
+        transform: translateY(-50%);
         right: 15px;
     }
     &__selection {
@@ -31,15 +32,22 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
             }
             span {
-                margin: 0 10px;
+                width: 22px;
+                text-align: center;
             }
         }
     }
     &__btns {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
     }
     &__use {
         font-family: 'Montserrat';
@@ -51,10 +59,23 @@
         cursor: pointer;
         margin-top: 22px;
         text-align: right;
+        width: 100%;
+        &.clean {
+            text-align: left;
+            display: none;
+        }
+    }
+    &__disabled-btn {
+        color: rgba(31, 32, 65, 0.5);
+        opacity: 0.5;
+        pointer-events: none;
     }
     &__dropdown {
         &.active {
             .dropdown-block {
+                input {
+                    border: 1px solid rgba(31, 32, 65, 0.5);
+                }
                 &__selection {
                     height: 100%;
                     border: 1px solid rgba(31, 32, 65, 0.5);
