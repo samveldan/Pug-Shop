@@ -422,7 +422,7 @@ html(lang="en")
                         .cards__block
                             .find-room.cards__find-room
                                 h1.h1-styles Найдём номера под ваши пожелания
-                                .find-room__dates
+                                .find-room__dates.input-date
                                     .find-room__date
                                         h3.h3-styles прибытие
                                         .dropdown-block
@@ -479,7 +479,7 @@ html(lang="en")
                                         label(for="female-main") Женщина
                                 .signup__date
                                     h3.h3-styles дата рождения
-                                    .dropdown-block
+                                    .dropdown-block.input-date
                                         input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
                                         img(src="assets/images/arrow.svg", alt="")
                                 .signup__info
@@ -501,7 +501,7 @@ html(lang="en")
                                     .booking__top-block
                                         div № <span>888</span> <span>люкс</span>
                                         div 9 990P <span>в сутки</span>
-                                .booking__dates
+                                .booking__dates.input-date
                                     .booking__date
                                         h3.h3-styles прибытие
                                         .dropdown-block
@@ -572,6 +572,9 @@ html(lang="en")
                                 .check-account.signin__check
                                     span Нет аккаунта на Toxin?
                                     button.buttons-block_third создать
+                        .cards__block
+                            .cards__date.date
+                                .date__wrapper
+                                    input(type="text").one
 
         script(src="./main.bundle.js")
-
