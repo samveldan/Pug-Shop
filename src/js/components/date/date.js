@@ -9,6 +9,14 @@ datesBlocks.forEach((element) => {
     let standardDate = firstInput.value;
 
     const a = new AirDatepicker(firstInput, {
+        inline : (function() {
+            if(element.classList.contains("date__wrapper")) return true
+            else return false
+        })(),
+        startDate : new Date(),
+        navTitles: {
+            days: '<strong>MMMM yyyy</strong>'    
+        },
         onSelect : function (date) {
             firstInput.value = standardDate;
             dates = date.formattedDate;

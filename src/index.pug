@@ -104,7 +104,8 @@ html(lang="en")
                                 h3.h3-styles subscription text field
                                 .sub-block
                                     input(type="text", placeholder="Email").form-elements__input.input.input-textfield
-                                    img(src="assets/images/sub-arrow.svg", alt="")
+                                    svg(viewBox="0 0 18 18")
+                                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
                         .form-elements__buttons
                             .form-elements__checkbox.checkbox-block
                                 h3.h3-styles checkbox buttons
@@ -184,7 +185,8 @@ html(lang="en")
                                     button.buttons-block_sixth.buttons-block_move click me
                                     button.buttons-block__payment.buttons-block_move.arrow-btn
                                         span Перейти к оплате
-                                        img(src="assets/images/white-arrow.svg", alt="")
+                                        svg(viewBox="0 0 18 18")
+                                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
                             .form-elements__pagination.pagination-block
                                 h3.pagination-block__h3.h3-styles pagination
                                 .pagination-block__pages
@@ -464,7 +466,8 @@ html(lang="en")
                                 .find-room__btn
                                     button.arrow-btn
                                         span Подобрать номер
-                                        img(src="assets/images/white-arrow.svg", alt="")
+                                        svg(viewBox="0 0 18 18")
+                                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
                             .cards__signup.signup
                                 h1.h1-styles Регистрация аккаунта
                                 .signup__name
@@ -491,7 +494,8 @@ html(lang="en")
                                         label(for="spec-main") Получать спецпредложения
                                 button.arrow-btn.signup__btn
                                     span Перейти к оплате
-                                    img(src="assets/images/white-arrow.svg", alt="")  
+                                    svg(viewBox="0 0 18 18")
+                                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z") 
                                 .check-account.signup__check
                                     span Уже есть аккаунт на Toxin
                                     button.buttons-block_third войти
@@ -559,7 +563,8 @@ html(lang="en")
                                 .booking__btn
                                     button.arrow-btn
                                         span Забронировать
-                                        img(src="assets/images/white-arrow.svg", alt="")
+                                        svg(viewBox="0 0 18 18")
+                                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
                             .cards__signin.signin
                                 h1.h1-styles Войти
                                 .signin__auth
@@ -568,13 +573,84 @@ html(lang="en")
                                 .signin__btn
                                     button.arrow-btn
                                         span Войти
-                                        img(src="assets/images/white-arrow.svg", alt="")
+                                        svg(viewBox="0 0 18 18")
+                                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
                                 .check-account.signin__check
                                     span Нет аккаунта на Toxin?
                                     button.buttons-block_third создать
                         .cards__block
                             .cards__date.date
-                                .date__wrapper
-                                    input(type="text").one
+                                .date__wrapper.input-date
+                                    input(type="hidden").one
+                                    input(type="hidden").one
+                            .cards__item
+                                .item.item-one
+                                    .item__wrapper
+                                        .item__img-block
+                                            .item__slides.slides
+                                                div(data-slider="1").item__img.active
+                                                    img(src="assets/images/slider-picture-1.jpg", alt="")
+                                                div(data-slider="2").item__img
+                                                    img(src="assets/images/slider-picture-1.jpg", alt="")
+                                                div(data-slider="3").item__img
+                                                    img(src="assets/images/slider-picture-1.jpg", alt="")
+                                                div(data-slider="4").item__img
+                                                    img(src="assets/images/slider-picture-1.jpg", alt="")
+                                            .item__arrows
+                                                .item__arrow.left
+                                                    svg(viewBox="0 0 12 8")
+                                                        path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                                                .item__arrow.right
+                                                    svg(viewBox="0 0 12 8")
+                                                        path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                                            .item__dots.dots
+                                                div(data-slider="1").active 
+                                                div(data-slider="2") 
+                                                div(data-slider="3") 
+                                                div(data-slider="4") 
+                                        .item__content
+                                            .item__top-block
+                                                div №<span> 888</span><span>люкс</span>
+                                                div 9 990P <span>в сутки</span>
+                                            .item__rating
+                                                .item__stars
+                                                    div.full-star 
+                                                    div.full-star 
+                                                    div.full-star 
+                                                    div.full-star 
+                                                    div.full-star
+                                                .item__reviews
+                                                    div <span>145</span> Отзывов
+                                .item.item-two
+                                    .item__wrapper
+                                        .item__img-block
+                                            .item__slides.slides
+                                                div(data-slider="1").item__img.active
+                                                    img(src="assets/images/slider-picture-2.jpg", alt="")
+                                                div(data-slider="2").item__img
+                                                    img(src="assets/images/slider-picture-2.jpg", alt="")
+                                                div(data-slider="3").item__img
+                                                    img(src="assets/images/slider-picture-2.jpg", alt="")
+                                                div(data-slider="4").item__img
+                                                    img(src="assets/images/slider-picture-2.jpg", alt="")
+                                            .item__dots.dots
+                                                div(data-slider="1").active 
+                                                div(data-slider="2") 
+                                                div(data-slider="3") 
+                                                div(data-slider="4") 
+                                        .item__content
+                                            .item__top-block
+                                                div №<span> 840</span> <span></span>
+                                                div 9 990P <span>в сутки</span>
+                                            .item__rating
+                                                .item__stars
+                                                    div.full-star 
+                                                    div.full-star 
+                                                    div.full-star 
+                                                    div.full-star 
+                                                    div.full-star
+                                                .item__reviews
+                                                    div <span>65</span> Отзывов
+
 
         script(src="./main.bundle.js")

@@ -2,9 +2,11 @@
 @import "./signup.scss";
 @import "./booking.scss";
 @import "./signin.scss";
+@import "./item.scss";
 
 .cards {
     margin-top: 200px;
+    background: #F4F4F6;
     &__content {
         margin-top: 70px;
         display: flex;
@@ -17,8 +19,16 @@
             margin-left: 40px;
             flex-basis: 32.7%;
         }
+        &:nth-child(3) {
+            margin-left: 40px;
+        }
     }
     &__signin {
         margin-top: 25px;
+    }
+    &__item {
+        .item {
+            margin-top: 40px;
+        }
     }
 }
