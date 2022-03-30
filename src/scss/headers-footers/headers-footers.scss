@@ -1,0 +1,19 @@
+.headers-footers {
+    background: #F4F4F6;
+    padding-bottom: 140px;
+    &__header-signup {
+        &:nth-child(2) {
+            margin-top: 60px;
+        }
+        &:nth-child(3) {
+            margin-top: 40px;
+        }
+    }
+    &__footer {
+        margin-top: 40px;
+    }
+}
+
+@import "./header-signup.scss";
+@import "./footer.scss";
+@import "./mobile-footer.scss";

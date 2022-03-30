@@ -360,6 +360,10 @@ template {
   line-height: 1;
 }
 
+a {
+  text-decoration: none;
+}
+
 label {
   cursor: pointer;
   -webkit-user-select: none;
@@ -2389,7 +2393,7 @@ label {
 .item__stars {
   display: flex;
 }
-.item__stars .full-star {
+.item__stars .full-star, .item__stars .half-star {
   height: 20px;
   width: 20px;
   background-image: url(../assets/images/star-bg.svg);
@@ -2397,8 +2401,11 @@ label {
   background-position: center center;
   margin-left: 4px;
 }
-.item__stars .full-star:first-child {
+.item__stars .full-star:first-child, .item__stars .half-star:first-child {
   margin-left: 0px;
+}
+.item__stars .half-star {
+  background-image: url(../assets/images/star.svg);
 }
 .item__reviews {
   font-weight: 400;
@@ -2415,6 +2422,7 @@ label {
 
 .cards {
   margin-top: 200px;
+  padding-bottom: 140px;
   background: #F4F4F6;
 }
 .cards__content {
@@ -2556,4 +2564,181 @@ label {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 100%;
   color: #fff;
+}
+
+.headers-footers {
+  background: #F4F4F6;
+  padding-bottom: 140px;
+}
+.headers-footers__header-signup:nth-child(2) {
+  margin-top: 60px;
+}
+.headers-footers__header-signup:nth-child(3) {
+  margin-top: 40px;
+}
+.headers-footers__footer {
+  margin-top: 40px;
+}
+
+.header-signup {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding: 13px 0px;
+}
+.header-signup__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-signup__menu {
+  display: flex;
+  align-items: center;
+  width: 61%;
+  justify-content: flex-end;
+}
+.header-signup__menu a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.header-signup__signin-btn {
+  padding: 9px 19px;
+  margin-right: 17px;
+}
+.header-signup__signup-btn {
+  padding: 9px 19px;
+}
+.header-signup__link {
+  margin-right: 25px;
+}
+.header-signup__link img {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.header-signup__link:last-child {
+  margin-right: 0px;
+}
+.header-signup__link.active a {
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 700;
+}
+.header-signup__name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  position: relative;
+}
+.header-signup__name:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(31, 32, 65, 0.1);
+}
+.header-signup__name span {
+  display: block;
+  padding: 10px 0px 10px 21px;
+}
+.header-signup_width .header-signup__menu {
+  width: 76%;
+}
+
+.footer {
+  background-color: #fff;
+  padding-top: 102px;
+  font-family: "Montserrat";
+  font-style: normal;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 100px;
+}
+.footer__logo {
+  margin-bottom: 15px;
+}
+.footer__logo-block {
+  max-width: 22%;
+}
+.footer__logo-info p {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.footer__menu-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  width: 14%;
+}
+.footer__menu-block a {
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-top: 24px;
+}
+.footer__subscription {
+  width: 22%;
+  margin-top: 5px;
+}
+.footer__subscription h3 {
+  margin-bottom: 20px;
+}
+.footer__subscription-info {
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  margin-bottom: 20px;
+}
+.footer__subscription-info p {
+  line-height: 24px;
+}
+
+.sub-footer {
+  border-top: 1px solid #dedee3;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  padding: 25px 0px;
+}
+.sub-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-footer__media {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+}
+
+.mobile-footer {
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 36px;
+  text-align: center;
+  padding: 120px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.mobile-footer__content {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-footer__media {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile-footer__text {
+  margin: 23px 0;
 }

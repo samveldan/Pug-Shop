@@ -99,7 +99,7 @@
     }
     &__stars {
         display: flex;
-        .full-star {
+        .full-star,.half-star {
             height: 20px;
             width: 20px;
             background-image: url(../assets/images/star-bg.svg);
@@ -109,6 +109,9 @@
             &:first-child {
                 margin-left: 0px;
             }
+        }
+        .half-star {
+            background-image: url(../assets/images/star.svg);
         }
     }
     &__reviews {

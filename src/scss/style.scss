@@ -4,6 +4,10 @@
     line-height: 1;
 }
 
+a {
+    text-decoration: none;
+}
+
 label {
     cursor: pointer;
     -webkit-user-select: none;
@@ -692,3 +696,4 @@ label {
 @import "./form-elements/form-elements.scss";
 @import "./cards/cards.scss";
 @import "./calendar/calendar.scss";
+@import "./headers-footers/headers-footers.scss";

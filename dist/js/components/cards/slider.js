@@ -7,42 +7,41 @@ class Slider {
         this.slidesBlock = this.slider.querySelector(".slides");
         this.slides = Array.from(this.slidesBlock.querySelectorAll("div"));
         this.dots = Array.from(this.slider.querySelectorAll(".dots div"));
+        this.width = 271;
+        this.maxWidth = this.countSlides() * this.width;
+        this.offset = 0;
 
         this.currentSlide = this.slider.querySelector(".active");
         this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
         this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
 
-        this.moveSlides();
-        this.useDots();
+        if(this.leftArrow && this.rightArrow) this.moveSlides();
+        this.setClasses("dots");
     }
 
     moveSlides() {
-        let width = 271;
-        let maxWidth = this.countSlides() * width;
-        let offset = 0;
-
         this.leftArrow.addEventListener("click", (e) => {
-            if(offset <= 0) {
-                offset = maxWidth - width;
+            if(this.offset <= 0) {
+                this.offset = this.maxWidth - this.width;
             }
             else {
-                offset -= width;
+                this.offset -= this.width;
             }
 
-            this.slidesBlock.style.right = offset + "px";
+            this.slidesBlock.style.right = this.offset + "px";
             this.setClasses("left");
 
         });
 
         this.rightArrow.addEventListener("click", (e) => {
-            if(offset >= maxWidth - width) {
-                offset = 0;
+            if(this.offset >= this.maxWidth - this.width) {
+                this.offset = 0;
             }
             else {
-                offset += width;
+                this.offset += this.width;
             }
 
-            this.slidesBlock.style.right = offset + "px";
+            this.slidesBlock.style.right = this.offset + "px";
             this.setClasses("right");
         });
     }
@@ -54,21 +53,48 @@ class Slider {
     }
 
     setClasses(side) {
-        this.clearActive(this.slides);
-        this.clearActive(this.dots);
 
-        if(side == "left") this.prevSlide.classList.add("active");
-        else this.nextSlide.classList.add("active");
+        if(side == "left" || side == "right") {
+            this.clearActive(this.slides);
+            this.clearActive(this.dots);
 
-        this.currentSlide = this.slider.querySelector(".active");
-        this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
-        this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
+            if(side == "left") this.prevSlide.classList.add("active");
+            else this.nextSlide.classList.add("active");
 
-        this.dots.forEach(dot => {
-            if(this.currentDataSlide() == dot.dataset.slider) {
-                dot.classList.add("active");
-            }
-        });
+            this.currentSlide = this.slider.querySelector(".active");
+            this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
+            this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
+
+            this.dots.forEach(dot => {
+                if(this.currentDataSlide() == dot.dataset.slider) {
+                    dot.classList.add("active");
+                }
+            });
+        }
+
+        else {
+            this.dots.forEach(dot => {
+                dot.addEventListener("click", () => {
+                    this.clearActive(this.slides);
+                    this.clearActive(this.dots);
+    
+                    let currentDotData = dot.dataset.slider;
+                    this.offset = (currentDotData - 1) * this.width;
+                    this.slidesBlock.style.right = this.offset + "px";
+
+                    this.slides.forEach((slide) => {
+                        if(slide.dataset.slider == currentDotData) {
+                            this.currentSlide = slide;
+                            this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
+                            this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
+
+                            slide.classList.add("active");
+                        }
+                    });
+                    dot.classList.add("active");
+                });
+            });
+        }
     }
 
     currentDataSlide() {
@@ -85,21 +111,10 @@ class Slider {
 
         return counter;
     }
-    // Доделать
-    useDots() {
-        this.dots.forEach(dot => {
-            dot.addEventListener("click", (e) => {
-                let currentDot = dot.dataset.slider;
-                
-                this.slides.forEach((slide) => {
-                    if(slide.dataset.slider == currentDot) {
-                        slide.classList.add("active");
-                    }
-                });
-            });
-        });
-    }
 }
 
-const item = document.querySelector(".item-one");
-const slider = new Slider(item);
+const itemOne = document.querySelector(".item-one");
+const sliderOne = new Slider(itemOne);
+
+const itemTwo = document.querySelector(".item-two");
+const sliderTwo = new Slider(itemTwo);
