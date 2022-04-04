@@ -3,6 +3,10 @@
     &__text {
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
     }
     &__price {
         font-family: 'Montserrat';
@@ -12,6 +16,9 @@
         text-align: right;
         text-transform: uppercase;
         color: rgba(31, 32, 65, 0.5);
+        @media screen and (max-width: 450px) {
+            margin-top: 10px;
+        }
     }
     &__slider {
         position: relative;

@@ -1,0 +1,59 @@
+extends ../../blocks/template/template.pug
+
+block title
+    title Главная
+block content
+    section.main
+        .container__content
+            .main__content
+                .find-room
+                    h1.h1-styles Найдём номера под ваши пожелания
+                    .find-room__dates.input-date
+                        .find-room__date
+                            h3.h3-styles прибытие
+                            .dropdown-block
+                                input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
+                                img(src="assets/images/arrow.svg", alt="")
+                        .find-room__date
+                            h3.h3-styles выезд
+                            .dropdown-block
+                                input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
+                                img(src="assets/images/arrow.svg", alt="")      
+                    .dropdown-block__dropdown.find-room__guests
+                        h3.h3-styles гости
+                        .input-block__dropdown.dropdown-block.top
+                            input(type="button", value="Сколько гостей").form-elements__input.input.input-dropdown
+                            img(src="assets/images/arrow.svg", alt="")
+                        .dropdown-block__selection.selection
+                            .dropdown-block__selection-wrapper
+                                .dropdown-block__option
+                                    h3.h3-styles взрослые
+                                    .dropdown-block__option-nums
+                                        div.dropdown-block__disabled-btn -
+                                        span.h3-styles 0
+                                        div +
+                                .dropdown-block__option
+                                    h3.h3-styles дети
+                                    .dropdown-block__option-nums
+                                        div.dropdown-block__disabled-btn -
+                                        span.h3-styles 0
+                                        div +
+                                .dropdown-block__option
+                                    h3.h3-styles младенцы
+                                    .dropdown-block__option-nums
+                                        div.dropdown-block__disabled-btn -
+                                        span.h3-styles 0
+                                        div +
+                                .dropdown-block__btns
+                                    .dropdown-block__use.clean очистить
+                                    .dropdown-block__use.use применить
+                    .find-room__btn
+                        a(href="search-room.html").arrow-btn
+                            span Подобрать номер
+                            svg(viewBox="0 0 18 18")
+                                path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
+                .main_small-text
+                    p Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+append scripts
+    script(src="js/components/date/date.js")
+    script(src="js/components/form-elements/dropdown-block.js")

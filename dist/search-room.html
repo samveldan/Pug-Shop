@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Выбор комнаты</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body> </body>
+<div class="header-signup">
+  <div class="container__content">
+    <div class="header-signup__content">
+      <div class="header-signup__logo"><a href="index.html"><img src="assets/images/headers-footers-logo.svg" alt=""></a></div>
+      <div class="burger">
+        <div></div>
+      </div>
+      <div class="burger-menu">
+        <ul class="header-signup__menu">
+          <div class="header-signup__link active"><a href="">
+              <div class="header-signup__item-wrapper">О нас</div></a></div>
+          <div class="header-signup__link header-signup__lists">
+            <div class="header-signup__item-wrapper"><span class="header-signup__menu-more-lists">Услуги</span>
+              <svg viewBox="0 0 12 8">
+                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="header-signup__link"><a href=""> 
+              <div class="header-signup__item-wrapper">Вакансии</div></a></div>
+          <div class="header-signup__link"><a href=""> 
+              <div class="header-signup__item-wrapper">Новости</div></a></div>
+          <div class="header-signup__link header-signup__lists">
+            <div class="header-signup__item-wrapper"><span class="header-signup__menu-more-lists">Соглашения</span>
+              <svg viewBox="0 0 12 8">
+                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+              </svg>
+            </div>
+          </div>
+        </ul>
+        <div class="header-signup__btns"><a href="sign-in.html">
+            <div class="header-signup__item-wrapper buttons-block_third header-signup__signin-btn">Войти</div></a><a href="sign-up.html">
+            <div class="header-signup__item-wrapper buttons-block_first header-signup__signup-btn"> Зарегистрироваться</div></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <section class="search-room">
+    <div class="container__content">
+      <div class="search-room__content">
+        <div class="search-room__filters">
+          <div class="input-block search-room__dates input-date search-date">
+            <h3 class="h3-styles">даты пребывания в отеле</h3>
+            <div class="input-block__dropdown dropdown-block">
+              <input class="input input-dropdown" type="button" value="19 авг - 23 авг">
+              <input type="hidden"><img src="assets/images/arrow.svg" alt="">
+            </div>
+          </div>
+          <div class="dropdown-block__dropdown search-room__guests">
+            <h3 class="h3-styles">гости</h3>
+            <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
+              <input class="form-elements__input input input-dropdown" type="button" value="3 гостя, 1 младенцы"><img src="assets/images/arrow.svg" alt="">
+            </div>
+            <div class="dropdown-block__selection selection">
+              <div class="dropdown-block__selection-wrapper">
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">взрослые</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div>-</div><span class="h3-styles">2</span>
+                    <div>+</div>
+                  </div>
+                </div>
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">дети</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div>-</div><span class="h3-styles">1</span>
+                    <div>+</div>
+                  </div>
+                </div>
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">младенцы</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">1</span>
+                    <div>+</div>
+                  </div>
+                </div>
+                <div class="dropdown-block__btns">
+                  <div class="dropdown-block__use clean">очистить</div>
+                  <div class="dropdown-block__use use">применить</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="range-slider search-room__range-slider">
+            <div class="range-slider__wrapper">
+              <div class="range-slider__text">
+                <h3 class="h3-styles">диапазон цены</h3>
+                <div class="range-slider__price"> <span>5 000Р </span><span>- </span><span>10 000Р</span></div>
+              </div>
+              <div class="range-slider__slider search-room__slider">
+                <div class="range-slider__slider-track"></div>
+                <input type="range" id="range-1" min="100" max="17000" value="5000" step="100">
+                <input type="range" id="range-2" min="100" max="17000" value="10000" step="100">
+              </div>
+              <div class="range-slider__under-text search-room__under-text"><span>Стоимость за сутки пребывания в номере</span></div>
+            </div>
+          </div>
+          <div class="checkbox-block search-room__checkbox">
+            <h3 class="h3-styles">правила дома</h3>
+            <div class="checkbox-block__elems">
+              <div class="checkbox-block__elem">
+                <input type="checkbox" id="smoke">
+                <label class="all-styles" for="smoke"> Можно курить                                    </label>
+              </div>
+              <div class="checkbox-block__elem">
+                <input type="checkbox" id="animals" checked="checked">
+                <label class="all-styles" for="animals"> Можно с питомцами      </label>
+              </div>
+              <div class="checkbox-block__elem">
+                <input type="checkbox" id="guests" checked="checked">
+                <label class="all-styles" for="guests"> Можно пригласить гостей <br> (до 10 человек)</label>
+              </div>
+            </div>
+          </div>
+          <div class="rich-checkbox search-room__rich-checkbox">
+            <h3 class="h3-styles">доступность</h3>
+            <div class="rich-checkbox__wrapper">
+              <div class="rich-checkbox__elem checkbox-block__elem">
+                <input class="checkbox-block__elem" type="checkbox" id="wide-hall">
+                <label for="wide-hall">
+                  <div class="rich-checkbox__text">
+                    <h2 class="h2-styles rich-checkbox__h2">Широкий коридор</h2>
+                    <p class="rich-checkbox__p">Ширина коридоров в номере не менее 91 см.</p>
+                  </div>
+                </label>
+              </div>
+              <div class="rich-checkbox__elem checkbox-block__elem">
+                <input class="checkbox-block__elem" type="checkbox" id="help">
+                <label for="help">
+                  <div class="rich-checkbox__text">
+                    <h2 class="h2-styles rich-checkbox__h2">Помощник для инвалидов</h2>
+                    <p class="rich-checkbox__p">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-block__dropdown search-room__comfort">
+            <h3 class="h3-styles">удобства номера</h3>
+            <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
+              <input class="form-elements__input input input-dropdown" type="button" value="2 спальни, 2 кровати..."><img src="assets/images/arrow.svg" alt="">
+            </div>
+            <div class="dropdown-block__selection selection">
+              <div class="dropdown-block__selection-wrapper">
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">Спальни</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div>-</div><span class="h3-styles">2</span>
+                    <div>+</div>
+                  </div>
+                </div>
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">кровати</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div>-</div><span class="h3-styles">2</span>
+                    <div>+</div>
+                  </div>
+                </div>
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">ванные комнаты</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                    <div>+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkbox-block expand-checkbox search-room__more-comfort">
+            <div class="checkbox-list__top expand-checkbox__top top">
+              <h3 class="h3-styles">дополнительные удобства</h3><img src="assets/images/arrow.svg" alt="">
+            </div>
+            <div class="checkbox-block__elems expand-checkbox__elems selection">
+              <div class="checkbox-block__wrapper">
+                <div class="checkbox-block__elem expand-checkbox__elem">
+                  <input type="checkbox" id="breakfast">
+                  <label class="all-styles" for="breakfast">Завтрак                                   </label>
+                </div>
+                <div class="checkbox-block__elem expand-checkbox__elem">
+                  <input type="checkbox" id="desk">
+                  <label class="all-styles" for="desk">Письменный стол     </label>
+                </div>
+                <div class="checkbox-block__elem expand-checkbox__elem">
+                  <input type="checkbox" id="chair">
+                  <label class="all-styles" for="chair">Стул для кормления</label>
+                </div>
+                <div class="checkbox-block__elem expand-checkbox__elem">
+                  <input type="checkbox" id="bed">
+                  <label class="all-styles" for="bed">Кроватка</label>
+                </div>
+                <div class="checkbox-block__elem expand-checkbox__elem">
+                  <input type="checkbox" id="tv">
+                  <label class="all-styles" for="tv">Телевизор</label>
+                </div>
+                <div class="checkbox-block__elem expand-checkbox__elem">
+                  <input type="checkbox" id="shampoo">
+                  <label class="all-styles" for="shampoo">Шампунь</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-room__rooms">
+          <h1 class="h1-styles">Номера, которые мы для вас подобрали</h1>
+          <div class="filter-sign"><img src="assets/images/filter.svg" alt="">
+            <div class="filter-sign__text">Фильтры</div>
+          </div>
+          <div class="search-room__items">
+            <div class="search-room__items-block">
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
+                    </div>
+                    <div class="item__arrows">
+                      <div class="item__arrow left">
+                        <svg viewBox="0 0 12 8">
+                          <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
+                        </svg>
+                      </div>
+                      <div class="item__arrow right">
+                        <svg viewBox="0 0 12 8">
+                          <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 888 </span><span>люкс</span></div>
+                      <div>9 990P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>145</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 840</span> <span></span></div>
+                      <div>9 990P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>65</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-3.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-3.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-3.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-3.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 980</span><span> люкс</span></div>
+                      <div>8 500P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>35</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="search-room__items-block">
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-4.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-4.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-4.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-4.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 856</span><span></span></div>
+                      <div>7 300P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>145</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-5.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-5.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-5.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-5.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"></div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 740</span> <span></span></div>
+                      <div>6 000P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>44</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-6.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-6.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-6.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-6.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 982</span> <span></span></div>
+                      <div>5 800P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>56</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="search-room__items-block">
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-7.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-7.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-7.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-7.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 678</span><span></span></div>
+                      <div>5 500P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>45</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-8.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-8.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-8.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-8.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 450</span> <span></span></div>
+                      <div>5 300P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>39</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-9.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-9.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-9.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-9.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 350</span> <span></span></div>
+                      <div>5 000P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>77</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="search-room__items-block">
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-10.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-10.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-10.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-10.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 666</span><span></span></div>
+                      <div>5 000P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>25</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-11.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-11.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-11.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-11.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"></div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 444</span> <span></span></div>
+                      <div>5 000P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>15</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+              <div class="item search-room__item">
+                <div class="item__wrapper">
+                  <div class="item__img-block">
+                    <div class="item__slides slides">
+                      <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-12.jpg" alt=""></div>
+                      <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-12.jpg" alt=""></div>
+                      <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-12.jpg" alt=""></div>
+                      <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-12.jpg" alt=""></div>
+                    </div>
+                    <div class="item__dots dots">
+                      <div class="active" data-slider="1"> </div>
+                      <div data-slider="2"> </div>
+                      <div data-slider="3"> </div>
+                      <div data-slider="4"> </div>
+                    </div>
+                  </div><a class="item__content search-room__item-content" href="room-details.html">
+                    <div class="item__top-block">
+                      <div>№<span> 352</span> <span></span></div>
+                      <div>5 0000P <span>в сутки</span></div>
+                    </div>
+                    <div class="item__rating">
+                      <div class="item__stars">
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="full-star"> </div>
+                        <div class="half-star"> </div>
+                        <div class="half-star"></div>
+                      </div>
+                      <div class="item__reviews">
+                        <div><span>55</span> Отзывов</div>
+                      </div>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="pagination-block search-room__pagination">
+              <div class="pagination-block__pages">
+                <div class="pagination-block__page">1</div>
+                <div class="pagination-block__page">2</div>
+                <div class="pagination-block__page">3</div>
+                <div class="pagination-block__dots">...</div>
+                <div class="pagination-block__page">15</div>
+                <div class="pagination-block__arrow"> <img src="assets/images/white-arrow.svg" alt=""></div>
+              </div>
+              <div class="pagination-block__text">1 – 12 из 100+ вариантов аренды</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="footer">
+  <div class="container__content">
+    <div class="footer__content">
+      <div class="footer__logo-block">
+        <div class="footer__logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
+        <div class="footer__logo-info">
+          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+      </div>
+      <div class="footer__menu-block">
+        <h3 class="h3-styles footer__menu-title">навигация</h3><a href="">О нас</a><a href="">Новости</a><a href="">Служба поддержки</a><a href="">Услуги</a>
+      </div>
+      <div class="footer__menu-block">
+        <h3 class="h3-styles footer__menu-title">о нас</h3><a href="">О сервисе</a><a href="">Наша команда</a><a href="">Вакансии</a><a href="">Инвесторы</a>
+      </div>
+      <div class="footer__menu-block">
+        <h3 class="h3-styles footer__menu-title">служба поддержки</h3><a href="">Соглашения</a><a href="">Сообщества</a><a href="">Связь с нами</a>
+      </div>
+      <div class="footer__subscription">
+        <h3 class="h3-styles footer__menu-title">подписка</h3>
+        <div class="footer__subscription-info">
+          <p>Получайте специальные предложения и новости сервиса</p>
+        </div>
+        <div class="input-block">
+          <div class="sub-block">
+            <input class="input input-textfield" type="text" placeholder="Email">
+            <svg viewBox="0 0 18 18">
+              <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__sub-footer sub-footer">
+    <div class="container__content">
+      <div class="sub-footer__content">
+        <p class="sub-footer__info">Copyright © 2018 Toxin отель. Все права защищены.</p>
+        <div class="sub-footer__media"><a class="sub-footer__img" href=""><img src="assets/images/twitter.svg" alt=""></a><a class="sub-footer__img" href=""><img src="assets/images/facebook.svg" alt=""></a><a class="sub-footer__img" href=""><img src="assets/images/instagram.svg" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<footer class="mobile-footer">
+  <div class="mobile-footer__content">
+    <div class="mobile-footer_logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
+    <div class="mobile-footer__text"><span>Copyright © 2018 Toxin отель. Все права защищены.</span></div>
+    <div class="mobile-footer__media"><a class="mobile-footer__img" href=""><img src="assets/images/twitter.svg" alt=""></a><a class="mobile-footer__img" href=""><img src="assets/images/facebook.svg" alt=""></a><a class="mobile-footer__img" href=""><img src="assets/images/instagram.svg" alt=""></a></div>
+  </div>
+</footer>
+  <script src="./js/components/burger-menu/burger-menu.js"></script>
+  <script src="./js/components/cards/slider.js"></script>
+  <script src="./js/components/date/date.js"></script>
+  <script src="./js/components/form-elements/dropdown-block.js"></script>
+  <script src="./js/components/form-elements/range-slider.js"></script>
+  <script src="./js/components/filter/filter.js"></script>
+</html>

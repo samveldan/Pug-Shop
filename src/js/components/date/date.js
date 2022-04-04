@@ -2,6 +2,20 @@ import AirDatepicker from "../../../../node_modules/air-datepicker/air-datepicke
 
 let datesBlocks = document.querySelectorAll(".input-date");
 let dates = null;
+const months = {
+    "01" : "янв",
+    "02" : "фев",
+    "03" : "март",
+    "04" : "апр",
+    "05" : "май",
+    "06" : "июнь",
+    "07" : "июль",
+    "08" : "авг",
+    "09" : "сент",
+    "10" : "окт",
+    "11" : "нояб",
+    "12" : "дек"
+};
 
 datesBlocks.forEach((element) => {
     let currentDates = Array.from(element.querySelectorAll("input"));
@@ -37,12 +51,30 @@ datesBlocks.forEach((element) => {
             content: 'Применить',
             className : "date-use",
             onClick : function() {
-                if(currentDates.length > 1) {
+                let containsDate = element.classList.contains("search-date");
+
+                if(currentDates.length > 1 && !containsDate) {
                     for(let i = 0; i < currentDates.length; i++) {
                         currentDates[i].value = dates[i];
                     }
                 }
+                else if(currentDates.length > 1 && containsDate) {
+                    let rangeDate = [];
+                    for(let i = 0; i < currentDates.length; i++) {
+                        let day = dates[i].slice(0, 2);
+                        let month = dates[i].slice(3, 5);
+                        
+                        for(let item in months) {
+                            if(item == month) {
+                                rangeDate.push(`${day} ${months[item]}`);
+                            }
+                        }
+                    }
+                    standardDate = rangeDate.join(" - ");
+                    currentDates[0].value = rangeDate.join(" - ");
+                }
                 else firstInput.value = dates;
+
                 a.hide();
             }
         }

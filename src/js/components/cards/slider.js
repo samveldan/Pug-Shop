@@ -1,7 +1,6 @@
 class Slider {
-    constructor(slider, options) {
+    constructor(slider) {
         this.slider = slider;
-        this.options = options;
         this.leftArrow = this.slider.querySelector(".left");
         this.rightArrow = this.slider.querySelector(".right");
         this.slidesBlock = this.slider.querySelector(".slides");
@@ -113,8 +112,7 @@ class Slider {
     }
 }
 
-const itemOne = document.querySelector(".item-one");
-const sliderOne = new Slider(itemOne);
-
-const itemTwo = document.querySelector(".item-two");
-const sliderTwo = new Slider(itemTwo);
+const items = document.querySelectorAll(".item");
+items.forEach((item) => {
+    new Slider(item);
+});

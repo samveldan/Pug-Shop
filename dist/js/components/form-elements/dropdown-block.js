@@ -1,189 +1,32 @@
-class Dropdown {
-    constructor(blocks) {
-        this.blocks = blocks;
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-        this.setListener(this.blocks);
-        this.setOpenItems(this.blocks);
-        this.setBtnListeners(this.blocks);
+/***/ "./js/components/form-elements/dropdown-block.js":
+/*!*******************************************************!*\
+  !*** ./js/components/form-elements/dropdown-block.js ***!
+  \*******************************************************/
+/***/ (() => {
 
-        this.blocks.forEach(fullBlock => {
-            this.removeCleanBtn(fullBlock, this.checkUseBtn(fullBlock));
-        });
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\nvar Dropdown = /*#__PURE__*/function () {\n  function Dropdown(blocks) {\n    var _this = this;\n\n    _classCallCheck(this, Dropdown);\n\n    this.blocks = blocks;\n    this.setListener(this.blocks);\n    this.setOpenItems(this.blocks);\n    this.setBtnListeners(this.blocks);\n    this.blocks.forEach(function (fullBlock) {\n      _this.removeCleanBtn(fullBlock, _this.checkUseBtn(fullBlock));\n    });\n    this.clear();\n  }\n\n  _createClass(Dropdown, [{\n    key: \"setListener\",\n    value: function setListener(items) {\n      var _this2 = this;\n\n      items.forEach(function (element) {\n        var top = _this2.findTopBlock(element);\n\n        top.addEventListener(\"click\", function (e) {\n          var selectionBlock = element.querySelector(\".selection\");\n          var currentHeight = selectionBlock.firstElementChild.clientHeight;\n\n          if (!element.classList.contains(\"active\")) {\n            selectionBlock.style.height = currentHeight + \"px\";\n          } else {\n            selectionBlock.style.height = 0 + \"px\";\n          }\n\n          element.classList.toggle(\"active\");\n        });\n      });\n    }\n  }, {\n    key: \"setOpenItems\",\n    value: function setOpenItems(items) {\n      items.forEach(function (element) {\n        var selectionBlock = element.querySelector(\".selection\");\n        var currentHeight = selectionBlock.firstElementChild.clientHeight;\n\n        if (element.classList.contains(\"active\")) {\n          selectionBlock.style.height = currentHeight + \"px\";\n        }\n      });\n    }\n  }, {\n    key: \"findTopBlock\",\n    value: function findTopBlock(element) {\n      for (var i = 0; i < element.children.length; i++) {\n        if (element.children[i].className.includes(\"top\")) {\n          return element.children[i];\n        }\n      }\n    }\n  }, {\n    key: \"setBtnListeners\",\n    value: function setBtnListeners(blocks) {\n      var _this3 = this;\n\n      blocks.forEach(function (block) {\n        if (block.querySelector(\".dropdown-block__option-nums\")) {\n          var nums = block.querySelectorAll(\".dropdown-block__option-nums\");\n          nums.forEach(function (element) {\n            var minusBtn = element.querySelector(\"div:first-child\");\n            var plusBtn = element.querySelector(\"div:last-child\");\n            minusBtn.addEventListener(\"click\", function (e) {\n              _this3.changeNums(e.target);\n            });\n            plusBtn.addEventListener(\"click\", function (e) {\n              _this3.changeNums(e.target);\n\n              minusBtn.classList.remove(\"dropdown-block__disabled-btn\");\n            });\n          });\n        }\n      });\n    }\n  }, {\n    key: \"changeNums\",\n    value: function changeNums(item) {\n      var parent = item.parentElement;\n      var text = parent.querySelector(\"span\");\n      var fullBlock = parent.closest(\".dropdown-block__dropdown\");\n      var title = fullBlock.querySelector(\".input-dropdown\");\n\n      if (item.innerText === \"+\") {\n        text.innerText = parseInt(text.innerText) + 1;\n      } else {\n        if (text.innerText != \"0\") text.innerText = parseInt(text.innerText) - 1;\n        if (text.innerText == \"0\") item.classList.add(\"dropdown-block__disabled-btn\");\n      }\n\n      this.removeCleanBtn(fullBlock, this.checkUseBtn(fullBlock));\n      title.value = this.getTitles(fullBlock);\n    }\n  }, {\n    key: \"checkUseBtn\",\n    value: function checkUseBtn(parent) {\n      return parent.querySelector(\".dropdown-block__use.use\");\n    }\n  }, {\n    key: \"getTitles\",\n    value: function getTitles(block) {\n      var options = block.querySelectorAll(\".dropdown-block__option\");\n      var text = [];\n      var guests = 0;\n      options.forEach(function (element) {\n        var guestTitle = element.querySelector(\"h3\").innerText.toLowerCase();\n        var guestNum = element.querySelector(\"span\").innerText;\n\n        if (guestTitle == \"взрослые\" || guestTitle == \"дети\") {\n          guests += parseInt(guestNum);\n        }\n      });\n      options.forEach(function (element) {\n        var title = element.querySelector(\"h3\").innerText.toLowerCase();\n        var num = element.querySelector(\"span\").innerText;\n\n        if (parseInt(num) != 0) {\n          if (title == \"взрослые\" || title == \"дети\") {\n            title = \"гостя\";\n            num = guests;\n          }\n\n          text.push(\"\".concat(num, \" \").concat(title));\n        }\n      });\n      text = text.filter(function (item, index, array) {\n        return array.indexOf(item) == index;\n      }).join(\", \");\n\n      if (text.length > 20) {\n        var newText = \"\";\n\n        for (var i = 0; i < 20; i++) {\n          newText += text[i];\n        }\n\n        return newText + \"...\";\n      } else return text;\n    }\n  }, {\n    key: \"removeCleanBtn\",\n    value: function removeCleanBtn(block, hasUseBtn) {\n      if (hasUseBtn) {\n        var cleanBtn = block.querySelector(\".dropdown-block__use.clean\");\n        var nums = block.querySelectorAll(\".dropdown-block__option-nums\");\n        var count = 0;\n        nums.forEach(function (element) {\n          var span = element.querySelector(\"span\");\n          if (span.innerText == \"0\") count += 1;\n        });\n\n        if (count == nums.length) {\n          cleanBtn.style.display = \"none\";\n        } else {\n          cleanBtn.style.display = \"block\";\n        }\n      }\n    }\n  }, {\n    key: \"clear\",\n    value: function clear() {\n      var cleanBtns = document.querySelectorAll(\".clean\");\n      cleanBtns.forEach(function (cleanBtn) {\n        cleanBtn.onclick = function (e) {\n          var parentBlock = this.closest(\".selection\");\n          var input = parentBlock.previousElementSibling.querySelector(\"input\");\n          var options = parentBlock.querySelectorAll(\".dropdown-block__option\");\n          options.forEach(function (option) {\n            var btnBlock = option.querySelector(\".dropdown-block__option-nums\");\n            var minusBtn = btnBlock.firstElementChild;\n            option.querySelector(\"span\").innerText = 0;\n            minusBtn.classList.add(\"dropdown-block__disabled-btn\");\n          });\n          cleanBtn.style.display = \"none\";\n          input.value = \"Сколько гостей\";\n        };\n      });\n    }\n  }]);\n\n  return Dropdown;\n}();\n\nvar dropdownAll = document.querySelectorAll(\".dropdown-block__dropdown\");\nnew Dropdown(dropdownAll);\nvar expandchecksAll = document.querySelectorAll(\".expand-checkbox\");\nnew Dropdown(expandchecksAll);\n\n//# sourceURL=webpack:///./js/components/form-elements/dropdown-block.js?");
 
-        this.clear();
-    }
+/***/ })
 
-    setListener(items) {
-        items.forEach(element => {
-            let top = this.findTopBlock(element);
-
-            top.addEventListener("click", (e) => {
-                let selectionBlock = element.querySelector(".selection");
-                let currentHeight = selectionBlock.firstElementChild.clientHeight;
-
-                if(!element.classList.contains("active")) {
-                    selectionBlock.style.height = currentHeight + "px";
-                }
-                else {
-                    selectionBlock.style.height = 0 + "px";
-                }
-
-                element.classList.toggle("active");
-            });
-        });
-    }
-
-    setOpenItems(items) {
-        items.forEach(element => {
-            let selectionBlock = element.querySelector(".selection");
-            let currentHeight = selectionBlock.firstElementChild.clientHeight;
-
-            if(element.classList.contains("active")) {
-                selectionBlock.style.height = currentHeight + "px";
-            }
-        });
-    }
-
-    findTopBlock(element) {
-        for(let i = 0; i < element.children.length; i++) {
-            if(element.children[i].className.includes("top")) {
-                return element.children[i];
-            }
-        }
-    }
-
-    setBtnListeners(blocks) {
-        blocks.forEach(block => {
-            if(block.querySelector(".dropdown-block__option-nums")) {
-                let nums = block.querySelectorAll(".dropdown-block__option-nums");
-
-                nums.forEach(element => {
-                    let minusBtn = element.querySelector("div:first-child");
-                    let plusBtn = element.querySelector("div:last-child");
-                    
-                    minusBtn.addEventListener("click", (e) => {
-                        this.changeNums(e.target);
-                    });
-                    plusBtn.addEventListener("click", (e) => {
-                        this.changeNums(e.target);
-                        minusBtn.classList.remove("dropdown-block__disabled-btn");
-                    });
-                });
-            }
-        });
-    }
-
-    changeNums(item) {
-        let parent = item.parentElement;
-        let text = parent.querySelector("span");
-        let fullBlock = parent.closest(".dropdown-block__dropdown");
-        let title = fullBlock.querySelector(".input-dropdown");
-        
-        if(item.innerText === "+") {
-            text.innerText = parseInt(text.innerText) + 1;
-        }
-        else {
-            if(text.innerText != "0") text.innerText = parseInt(text.innerText) - 1;
-            if(text.innerText == "0") item.classList.add("dropdown-block__disabled-btn");
-        }
-
-        this.removeCleanBtn(fullBlock, this.checkUseBtn(fullBlock));
-
-        title.value = this.getTitles(fullBlock);
-    }
-
-    checkUseBtn(parent) {
-        return parent.querySelector(".dropdown-block__use.use");
-    }
-
-    getTitles(block) {
-        let options = block.querySelectorAll(".dropdown-block__option");
-        let text = [];
-        let guests = 0;
-
-        options.forEach(element => {
-            let guestTitle = element.querySelector("h3").innerText.toLowerCase();
-            let guestNum = element.querySelector("span").innerText;
-            
-            if(guestTitle == "взрослые" || guestTitle == "дети")  {
-                guests += parseInt(guestNum);
-            }
-        });
-
-        options.forEach(element => {
-            let title = element.querySelector("h3").innerText.toLowerCase();
-            let num = element.querySelector("span").innerText;
-            
-            if(parseInt(num) != 0) {
-                if(title == "взрослые" || title == "дети")  {
-                    title = "гостя";
-                    num = guests;
-                }
-                text.push(`${num} ${title}`);
-            }
-        });
-        text = text.filter((item, index, array) => {
-            return array.indexOf(item) == index;
-        }).join(", ");
-
-        if(text.length > 20) {
-            let newText = "";
-            for(let i = 0; i < 20; i++) {
-                newText += text[i];
-            }
-            return newText + "...";
-        }
-        else return text;
-    }
-
-    removeCleanBtn(block, hasUseBtn) {
-        if(hasUseBtn) {
-            let cleanBtn = block.querySelector(".dropdown-block__use.clean");
-            let nums = block.querySelectorAll(".dropdown-block__option-nums");
-            let count = 0;
-
-            nums.forEach(element => {
-                let span = element.querySelector("span");
-                if(span.innerText == "0") count += 1;
-            });
-            if(count == nums.length) {
-                cleanBtn.style.display = "none";
-            }
-            else {
-                cleanBtn.style.display = "block";
-            }
-        }
-    }
-
-    clear() {
-        let cleanBtns = document.querySelectorAll(".clean");
-
-        cleanBtns.forEach(cleanBtn => {
-            cleanBtn.onclick = function(e) {
-                let parentBlock = this.closest(".selection");
-                let input = parentBlock.previousElementSibling.querySelector("input");
-                let options = parentBlock.querySelectorAll(".dropdown-block__option");
-
-                options.forEach((option) => {
-                    let btnBlock = option.querySelector(".dropdown-block__option-nums");
-                    let minusBtn = btnBlock.firstElementChild;
-
-                    option.querySelector("span").innerText = 0;
-                    minusBtn.classList.add("dropdown-block__disabled-btn");
-                });
-                
-                cleanBtn.style.display = "none";
-                input.value = "Сколько гостей";
-            };
-        });
-    }
-}
-
-const dropdownAll = document.querySelectorAll(".dropdown-block__dropdown");
-new Dropdown(dropdownAll);
-
-const expandchecksAll = document.querySelectorAll(".expand-checkbox");
-new Dropdown(expandchecksAll);
-
-
-
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./js/components/form-elements/dropdown-block.js"]();
+/******/ 	
+/******/ })()
+;

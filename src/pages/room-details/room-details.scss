@@ -1,0 +1,252 @@
+.room-details {
+    font-family: 'Montserrat';
+    border-bottom: 1px solid #dedee3;
+    padding-bottom: 70px;
+    @media screen and (max-width: 620px) {
+        padding-bottom: 50px;
+    }
+    h2 {
+        @media screen and (max-width: 620px) {
+            text-align: center;
+        }
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    &__content {
+        margin-top: 72px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1200px) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            margin-top: 45px;
+        }
+    }
+    &__images {
+        display: flex;
+        justify-content: center;
+    }
+    &__images-block {
+        display: flex;
+        flex-direction: column;
+        &:last-child {
+            img:last-child {
+                margin-top: -1px;
+            }
+        }
+    }
+    &__smiles {
+        padding: 25px 0;
+        &:last-child {
+            border-bottom: 0px;
+        }
+    }
+    &__inner-block {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1200px) {
+            justify-content: space-around;
+        }
+        @media screen and (max-width: 620px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__block {
+        &:first-child {
+            width: 61%;
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+        &:last-child {
+            width: 33%;
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+            }
+        }
+    }
+    &__booking {
+        @media screen and (max-width: 1200px) {
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 620px) {
+            padding: 35px 20px;
+        }
+        &-price {
+            @media screen and (max-width: 620px) {
+                font-size: 17px;
+            }
+        }
+        &-info {
+            @media screen and (max-width: 620px) {
+                font-size: 13px;
+            }
+        }
+        &-dates {
+            @media screen and (max-width: 400px) {
+                .dropdown-block {
+                    min-width: 130px;
+                }
+            }
+        }
+    }
+    &__impression {
+        color: #BC9CFF;
+        font-style: normal;
+        font-weight: 700;
+        width: 44%;
+        margin-right: 35px;
+        @media screen and (max-width: 1200px) {
+            width: auto;
+        }
+        @media screen and (max-width: 620px) {
+            margin-right: 0px;
+            margin-top: 20px;
+        }
+        &-img {
+            position: relative;
+            width: fit-content;
+        }
+        &-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            span {
+                display: block;
+                text-align: center;
+                &:first-child {
+                    font-size: 24px;
+                }
+                &:last-child {
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-top: 3px;
+                }
+            }
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            color: rgba(31, 32, 65, 0.75);
+            font-weight: 400;
+            @media screen and (max-width: 1200px) {
+                margin-left: 15px;
+            }
+            &-block {
+                display: flex;
+                margin-top: 11px;
+                &:first-child {
+                    margin-top: 0px;
+                }
+                span {
+                    &:first-child {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            &_yellow {
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            }
+            &_green {
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            }
+            &_purple {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+            &_black {
+                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+            }
+        }
+        &-content {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-top: 18px;
+        }
+    }
+    &__reviews {
+        margin-top: 8px;
+        @media screen and (max-width: 1200px) {
+            h2 {
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 620px) {
+            margin-top: 60px;
+        }
+        &-block {
+            &:last-child {
+                margin-top: 22px;
+            }
+        }
+        .all-styles {
+            width: 100%;
+            margin-left: 19px;
+        }
+        &-content {
+            margin-top: 20px;
+        }
+        &-img {
+            img {
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+            } 
+        }
+    }
+    &__rules {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        @media screen and (max-width: 620px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__bullet {
+        width: 100%;
+        &-wrapper {
+            margin-top: 15px;
+        }
+        h2 {
+            margin-left: 20px;
+            @media screen and (max-width: 620px) {
+                margin-left: 0px;
+                text-align: left;
+            }
+        }
+        &-elem {
+            margin-top: 12px;
+        }
+    }
+    &__cancel {
+        max-width: 49%;
+        @media screen and (max-width: 620px) {
+            margin-top: 30px;
+            h2 {
+                text-align: left;
+            }
+            max-width: 100%;
+        }
+    }
+    &__cancel-text {
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+}

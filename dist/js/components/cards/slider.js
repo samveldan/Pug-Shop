@@ -1,120 +1,32 @@
-class Slider {
-    constructor(slider, options) {
-        this.slider = slider;
-        this.options = options;
-        this.leftArrow = this.slider.querySelector(".left");
-        this.rightArrow = this.slider.querySelector(".right");
-        this.slidesBlock = this.slider.querySelector(".slides");
-        this.slides = Array.from(this.slidesBlock.querySelectorAll("div"));
-        this.dots = Array.from(this.slider.querySelectorAll(".dots div"));
-        this.width = 271;
-        this.maxWidth = this.countSlides() * this.width;
-        this.offset = 0;
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-        this.currentSlide = this.slider.querySelector(".active");
-        this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
-        this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
+/***/ "./js/components/cards/slider.js":
+/*!***************************************!*\
+  !*** ./js/components/cards/slider.js ***!
+  \***************************************/
+/***/ (() => {
 
-        if(this.leftArrow && this.rightArrow) this.moveSlides();
-        this.setClasses("dots");
-    }
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\nvar Slider = /*#__PURE__*/function () {\n  function Slider(slider) {\n    _classCallCheck(this, Slider);\n\n    this.slider = slider;\n    this.leftArrow = this.slider.querySelector(\".left\");\n    this.rightArrow = this.slider.querySelector(\".right\");\n    this.slidesBlock = this.slider.querySelector(\".slides\");\n    this.slides = Array.from(this.slidesBlock.querySelectorAll(\"div\"));\n    this.dots = Array.from(this.slider.querySelectorAll(\".dots div\"));\n    this.width = 271;\n    this.maxWidth = this.countSlides() * this.width;\n    this.offset = 0;\n    this.currentSlide = this.slider.querySelector(\".active\");\n    this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];\n    this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];\n    if (this.leftArrow && this.rightArrow) this.moveSlides();\n    this.setClasses(\"dots\");\n  }\n\n  _createClass(Slider, [{\n    key: \"moveSlides\",\n    value: function moveSlides() {\n      var _this = this;\n\n      this.leftArrow.addEventListener(\"click\", function (e) {\n        if (_this.offset <= 0) {\n          _this.offset = _this.maxWidth - _this.width;\n        } else {\n          _this.offset -= _this.width;\n        }\n\n        _this.slidesBlock.style.right = _this.offset + \"px\";\n\n        _this.setClasses(\"left\");\n      });\n      this.rightArrow.addEventListener(\"click\", function (e) {\n        if (_this.offset >= _this.maxWidth - _this.width) {\n          _this.offset = 0;\n        } else {\n          _this.offset += _this.width;\n        }\n\n        _this.slidesBlock.style.right = _this.offset + \"px\";\n\n        _this.setClasses(\"right\");\n      });\n    }\n  }, {\n    key: \"clearActive\",\n    value: function clearActive(elements) {\n      elements.forEach(function (element) {\n        element.classList.remove(\"active\");\n      });\n    }\n  }, {\n    key: \"setClasses\",\n    value: function setClasses(side) {\n      var _this2 = this;\n\n      if (side == \"left\" || side == \"right\") {\n        this.clearActive(this.slides);\n        this.clearActive(this.dots);\n        if (side == \"left\") this.prevSlide.classList.add(\"active\");else this.nextSlide.classList.add(\"active\");\n        this.currentSlide = this.slider.querySelector(\".active\");\n        this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];\n        this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];\n        this.dots.forEach(function (dot) {\n          if (_this2.currentDataSlide() == dot.dataset.slider) {\n            dot.classList.add(\"active\");\n          }\n        });\n      } else {\n        this.dots.forEach(function (dot) {\n          dot.addEventListener(\"click\", function () {\n            _this2.clearActive(_this2.slides);\n\n            _this2.clearActive(_this2.dots);\n\n            var currentDotData = dot.dataset.slider;\n            _this2.offset = (currentDotData - 1) * _this2.width;\n            _this2.slidesBlock.style.right = _this2.offset + \"px\";\n\n            _this2.slides.forEach(function (slide) {\n              if (slide.dataset.slider == currentDotData) {\n                _this2.currentSlide = slide;\n                _this2.prevSlide = _this2.currentSlide.previousElementSibling || _this2.slides[_this2.slides.length - 1];\n                _this2.nextSlide = _this2.currentSlide.nextElementSibling || _this2.slides[0];\n                slide.classList.add(\"active\");\n              }\n            });\n\n            dot.classList.add(\"active\");\n          });\n        });\n      }\n    }\n  }, {\n    key: \"currentDataSlide\",\n    value: function currentDataSlide() {\n      var data = this.currentSlide.dataset.slider;\n      return data;\n    }\n  }, {\n    key: \"countSlides\",\n    value: function countSlides() {\n      var counter = 0;\n      this.slides.forEach(function (element) {\n        counter += 1;\n      });\n      return counter;\n    }\n  }]);\n\n  return Slider;\n}();\n\nvar items = document.querySelectorAll(\".item\");\nitems.forEach(function (item) {\n  new Slider(item);\n});\n\n//# sourceURL=webpack:///./js/components/cards/slider.js?");
 
-    moveSlides() {
-        this.leftArrow.addEventListener("click", (e) => {
-            if(this.offset <= 0) {
-                this.offset = this.maxWidth - this.width;
-            }
-            else {
-                this.offset -= this.width;
-            }
+/***/ })
 
-            this.slidesBlock.style.right = this.offset + "px";
-            this.setClasses("left");
-
-        });
-
-        this.rightArrow.addEventListener("click", (e) => {
-            if(this.offset >= this.maxWidth - this.width) {
-                this.offset = 0;
-            }
-            else {
-                this.offset += this.width;
-            }
-
-            this.slidesBlock.style.right = this.offset + "px";
-            this.setClasses("right");
-        });
-    }
-
-    clearActive(elements) {
-        elements.forEach(element => {
-            element.classList.remove("active");
-        });
-    }
-
-    setClasses(side) {
-
-        if(side == "left" || side == "right") {
-            this.clearActive(this.slides);
-            this.clearActive(this.dots);
-
-            if(side == "left") this.prevSlide.classList.add("active");
-            else this.nextSlide.classList.add("active");
-
-            this.currentSlide = this.slider.querySelector(".active");
-            this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
-            this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
-
-            this.dots.forEach(dot => {
-                if(this.currentDataSlide() == dot.dataset.slider) {
-                    dot.classList.add("active");
-                }
-            });
-        }
-
-        else {
-            this.dots.forEach(dot => {
-                dot.addEventListener("click", () => {
-                    this.clearActive(this.slides);
-                    this.clearActive(this.dots);
-    
-                    let currentDotData = dot.dataset.slider;
-                    this.offset = (currentDotData - 1) * this.width;
-                    this.slidesBlock.style.right = this.offset + "px";
-
-                    this.slides.forEach((slide) => {
-                        if(slide.dataset.slider == currentDotData) {
-                            this.currentSlide = slide;
-                            this.prevSlide = this.currentSlide.previousElementSibling || this.slides[this.slides.length - 1];
-                            this.nextSlide = this.currentSlide.nextElementSibling || this.slides[0];
-
-                            slide.classList.add("active");
-                        }
-                    });
-                    dot.classList.add("active");
-                });
-            });
-        }
-    }
-
-    currentDataSlide() {
-        let data = this.currentSlide.dataset.slider;
-        return data;
-    }
-
-    countSlides() {
-        let counter = 0;
-        
-        this.slides.forEach(element => {
-            counter += 1;    
-        });
-
-        return counter;
-    }
-}
-
-const itemOne = document.querySelector(".item-one");
-const sliderOne = new Slider(itemOne);
-
-const itemTwo = document.querySelector(".item-two");
-const sliderTwo = new Slider(itemTwo);
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./js/components/cards/slider.js"]();
+/******/ 	
+/******/ })()
+;

@@ -1,0 +1,41 @@
+extends ../../blocks/template/template.pug
+
+block title
+    title Регистрация
+block content
+    section.sign-up
+        .container__content
+            .sign-up__content
+                .sign-up__block.signup
+                    h1.h1-styles Регистрация аккаунта
+                    .signup__name
+                        input(placeholder="Имя").input
+                        input(placeholder="Фамилия").input
+                    .radio-btns__wrapper.signup__radio-btns
+                        .radio-btns__block
+                            input(type="radio", id="male-main", name="sex-main", checked)
+                            label(for="male-main") Мужчина
+                        .radio-btns__block
+                            input(type="radio", id="female-main", name="sex-main")
+                            label(for="female-main") Женщина
+                    .signup__date
+                        h3.h3-styles дата рождения
+                        .dropdown-block.input-date
+                            input(type="button", value="ДД.ММ.ГГ").input.input-dropdown
+                            img(src="assets/images/arrow.svg", alt="")
+                    .signup__info
+                        h3.h3-styles данные для входа в сервис
+                        input(placeholder="Email").input
+                        input(placeholder="Пароль").input
+                        .toggle-btns__block.signup__toggle-btns
+                            input(type="checkbox", id="spec-main")
+                            label(for="spec-main") Получать спецпредложения
+                    button.arrow-btn.signup__btn
+                        span Перейти к оплате
+                        svg(viewBox="0 0 18 18")
+                                path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z") 
+                    .check-account.signup__check
+                        span Уже есть аккаунт на Toxin
+                        button.buttons-block_third войти
+append scripts
+    script(src="./js/components/date/date.js")

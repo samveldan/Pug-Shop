@@ -1,0 +1,133 @@
+.search-room {
+    h1 {
+        margin: 0;
+        @media screen and (max-width: 900px) {
+            text-align: center;
+        }
+    }
+    &__content {
+        display: flex;
+        margin-top: 30px;
+    }
+    &__under-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(31, 32, 65, 0.5);
+        margin-top: 44px;
+    }
+    &__filters {
+        box-sizing: border-box;
+        max-width: 23%;
+        min-width: 245px;
+        @media screen and (max-width: 900px) {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+            z-index: 999;
+            background-color: #fff;
+            padding: 50px 20px;
+            transform: translateX(-110%);
+            transition: .3s all;
+            &.active {
+                transform: translateX(0%);
+            }
+        }
+    }
+    &__guests {
+        margin-top: 23px;
+    }
+    &__range-slider {
+        margin-top: 30px;
+    }
+    &__slider {
+        margin-top: 23px;
+    }
+    &__checkbox {
+        margin-top: 30px;
+    }
+    &__rich-checkbox {
+        margin-top: 22px;
+    }
+    &__comfort {
+        margin-top: 30px;
+    }
+    &__more-comfort {
+        margin-top: 30px;
+    }
+    &__rooms {
+        margin-left: 60px;
+        width: 100%;
+        @media screen and (max-width: 900px) {
+            margin-left: 0px;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+        flex-wrap: wrap;
+        @media screen and (max-width: 1200px) {
+            flex-direction: row;
+        }
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 9px;
+            @media screen and (max-width: 1200px) {
+                flex-direction: column;
+                max-width: 50%;
+                margin-top: 0px;
+            }
+            @media screen and (max-width: 900px) {
+                justify-content: center;
+                align-items: center;
+                .search-room {
+                    &__item {
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 600px) {
+                max-width: 100%;
+            }
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+    &__item-content {
+        display: block;
+    }
+    &__pagination {
+        margin: 0 auto;
+        margin-top: 41px;
+    }
+}
+
+.filter-sign {
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: fit-content;
+    margin-left: auto;
+    @media screen and (max-width: 900px) {
+        display: flex;
+    }
+    img {
+        width: 17px;
+        margin-right: 10px;
+    }
+}

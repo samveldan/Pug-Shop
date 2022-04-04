@@ -5,6 +5,9 @@
     font-size: 24px;
     line-height: 29px;
     color:#1F2041;
+    @media screen and (max-width: 576px){
+        font-size: 22px;
+    }
 }
 
 .h2-styles {

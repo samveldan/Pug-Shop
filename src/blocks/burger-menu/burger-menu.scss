@@ -1,0 +1,135 @@
+.burger {
+    display: none;
+    width: 35px;
+    height: 25px;
+    position: relative;
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #333;
+            transition: .3s all;
+        } 
+        &::before, &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            top: 50%;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            transform: translateY(-50%);
+            transition: .3s all;
+        }
+        &:after {
+            top: 100%;
+        }
+    &.active {
+        div {
+            top: 50%;
+            transform: translateY(-50%) rotate(-40deg);
+        }
+        &:after {
+            top: 50%;
+            transform: translateY(-50%) rotate(40deg);
+        }
+        &:before {
+            content: "";
+            display: none;
+        }
+    }
+    @media screen and (max-width: 950px) {
+        display: block;
+    }
+}
+.burger-menu {
+    display: flex;
+    z-index: 999999999;
+    @media screen and (max-width: 950px) {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: .3s;
+        transform: translateX(-110%);
+        flex-direction: column;
+        min-height: 100vh;
+        width: 55vw;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        background-color: black;
+        text-align: center;
+        &.active {
+            transform: translateX(0);
+        }
+        .header-signup {
+            &__item-wrapper {
+                width: 120px;
+                margin: 0 auto;
+                text-align: left;
+            }
+            &__menu {
+                width: 100%;
+                flex-direction: column;
+                a {
+                    display: inline-block;
+                    color: #fff;
+                    padding: 10% 0;
+                    width: 100%;
+                    @media screen and (max-width: 600px){
+                        font-size: 12px;
+                    }
+                }
+                &-more-lists {
+                    display: inline-block;
+                    color: #fff; 
+                    @media screen and (max-width: 600px){
+                        font-size: 12px;
+                    }
+                }
+            }
+            &__lists {
+                padding: 10% 0;
+                cursor: pointer;
+                
+            }
+            &__link {
+                margin-right: 0px;
+                width: 100%;
+                border-bottom: 1px solid #333;
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+            &__btns {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10%;
+                a {
+                    border: 1px solid #333;
+                    padding: 7% 0;
+                    width: 100%;
+                }
+                a div{
+                    font-weight: 400;
+                    margin-right: 0px;
+                    border: 0;
+                    color: #fff;
+                    border-radius: 0;
+                    background: transparent;
+                    width: 120px;
+                    margin: 0 auto;
+                    padding: 0;
+                    @media screen and (max-width: 600px){
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

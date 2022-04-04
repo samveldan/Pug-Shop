@@ -4,911 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Document</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body> 
-    <section class="colors-type">
-      <div class="container__wrapper">
-        <div class="logo"><img src="assets/images/logo.png" alt=""></div>
-        <div class="colors-type__inner">
-          <div class="container__content">
-            <div class="colors-type__content">
-              <div class="colors-type__colors">
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_shade100"></div>
-                  <div class="colors-type__square-text"><span>Dark Shade 100%</span><span>#1F2041</span></div>
-                </div>
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_shade75"></div>
-                  <div class="colors-type__square-text"><span>Dark Shade 75%</span><span>#1F2041</span></div>
-                </div>
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_shade50"></div>
-                  <div class="colors-type__square-text"><span>Dark Shade 50%</span><span>#1F2041</span></div>
-                </div>
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_shade25"></div>
-                  <div class="colors-type__square-text"><span>Dark Shade 25%</span><span>#1F2041</span></div>
-                </div>
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_shade5"></div>
-                  <div class="colors-type__square-text"><span>Dark Shade 5%</span><span>#1F2041</span></div>
-                </div>
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_purple"></div>
-                  <div class="colors-type__square-text"><span>Purple</span><span>#BC9CFF</span></div>
-                </div>
-                <div class="colors-type__color-block">
-                  <div class="colors-type__square colors-type__square_green"></div>
-                  <div class="colors-type__square-text"><span>Green</span><span>#6FCF97</span></div>
-                </div>
+  <body> </body>
+<div class="header-signup">
+  <div class="container__content">
+    <div class="header-signup__content">
+      <div class="header-signup__logo"><a href="index.html"><img src="assets/images/headers-footers-logo.svg" alt=""></a></div>
+      <div class="burger">
+        <div></div>
+      </div>
+      <div class="burger-menu">
+        <ul class="header-signup__menu">
+          <div class="header-signup__link active"><a href="">
+              <div class="header-signup__item-wrapper">О нас</div></a></div>
+          <div class="header-signup__link header-signup__lists">
+            <div class="header-signup__item-wrapper"><span class="header-signup__menu-more-lists">Услуги</span>
+              <svg viewBox="0 0 12 8">
+                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="header-signup__link"><a href=""> 
+              <div class="header-signup__item-wrapper">Вакансии</div></a></div>
+          <div class="header-signup__link"><a href=""> 
+              <div class="header-signup__item-wrapper">Новости</div></a></div>
+          <div class="header-signup__link header-signup__lists">
+            <div class="header-signup__item-wrapper"><span class="header-signup__menu-more-lists">Соглашения</span>
+              <svg viewBox="0 0 12 8">
+                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+              </svg>
+            </div>
+          </div>
+        </ul>
+        <div class="header-signup__btns"><a href="sign-in.html">
+            <div class="header-signup__item-wrapper buttons-block_third header-signup__signin-btn">Войти</div></a><a href="sign-up.html">
+            <div class="header-signup__item-wrapper buttons-block_first header-signup__signup-btn"> Зарегистрироваться</div></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <section class="main">
+    <div class="container__content">
+      <div class="main__content">
+        <div class="find-room">
+          <h1 class="h1-styles">Найдём номера под ваши пожелания</h1>
+          <div class="find-room__dates input-date">
+            <div class="find-room__date">
+              <h3 class="h3-styles">прибытие</h3>
+              <div class="dropdown-block">
+                <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
               </div>
-              <div class="colors-type__titles-content">
-                <div class="colors-type__title-block">
-                  <div class="colors-type__title colors-type__title_h1">H1</div>
-                  <p class="colors-type__p h1-styles">This one is the sub-section or widget title</p>
+            </div>
+            <div class="find-room__date">
+              <h3 class="h3-styles">выезд</h3>
+              <div class="dropdown-block">
+                <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-block__dropdown find-room__guests">
+            <h3 class="h3-styles">гости</h3>
+            <div class="input-block__dropdown dropdown-block top">
+              <input class="form-elements__input input input-dropdown" type="button" value="Сколько гостей"><img src="assets/images/arrow.svg" alt="">
+            </div>
+            <div class="dropdown-block__selection selection">
+              <div class="dropdown-block__selection-wrapper">
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">взрослые</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                    <div>+</div>
+                  </div>
                 </div>
-                <div class="colors-type__title-block">
-                  <div class="colors-type__title colors-type__title_h2">H2</div>
-                  <p class="colors-type__p h2-styles">Next one is the item title inside widgets</p>
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">дети</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                    <div>+</div>
+                  </div>
                 </div>
-                <div class="colors-type__title-block">
-                  <div class="colors-type__title colors-type__title_h3">H3</div>
-                  <p class="colors-type__p h3-styles">This is a label or CTA text</p>
+                <div class="dropdown-block__option">
+                  <h3 class="h3-styles">младенцы</h3>
+                  <div class="dropdown-block__option-nums">
+                    <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
+                    <div>+</div>
+                  </div>
                 </div>
-                <div class="colors-type__title-block">
-                  <div class="colors-type__title colors-type__title_body">Body</div>
-                  <p class="colors-type__p all-styles">This is the body text which is used for most of the design, like paragraphs, lists, etc.</p>
+                <div class="dropdown-block__btns">
+                  <div class="dropdown-block__use clean">очистить</div>
+                  <div class="dropdown-block__use use">применить</div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="find-room__btn"><a class="arrow-btn" href="search-room.html"><span>Подобрать номер</span>
+              <svg viewBox="0 0 18 18">
+                <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
+              </svg></a></div>
+        </div>
+        <div class="main_small-text">
+          <p>Лучшие номера для вашей работы,<br> отдыха и просто вдохновения</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="footer">
+  <div class="container__content">
+    <div class="footer__content">
+      <div class="footer__logo-block">
+        <div class="footer__logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
+        <div class="footer__logo-info">
+          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+      </div>
+      <div class="footer__menu-block">
+        <h3 class="h3-styles footer__menu-title">навигация</h3><a href="">О нас</a><a href="">Новости</a><a href="">Служба поддержки</a><a href="">Услуги</a>
+      </div>
+      <div class="footer__menu-block">
+        <h3 class="h3-styles footer__menu-title">о нас</h3><a href="">О сервисе</a><a href="">Наша команда</a><a href="">Вакансии</a><a href="">Инвесторы</a>
+      </div>
+      <div class="footer__menu-block">
+        <h3 class="h3-styles footer__menu-title">служба поддержки</h3><a href="">Соглашения</a><a href="">Сообщества</a><a href="">Связь с нами</a>
+      </div>
+      <div class="footer__subscription">
+        <h3 class="h3-styles footer__menu-title">подписка</h3>
+        <div class="footer__subscription-info">
+          <p>Получайте специальные предложения и новости сервиса</p>
+        </div>
+        <div class="input-block">
+          <div class="sub-block">
+            <input class="input input-textfield" type="text" placeholder="Email">
+            <svg viewBox="0 0 18 18">
+              <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
+            </svg>
           </div>
         </div>
       </div>
-    </section>
-    <section class="form-elements">
-      <div class="container__wrapper">
-        <div class="logo"><img src="assets/images/logo.png" alt=""></div>
-        <div class="container__content">
-          <div class="form-elements__content">
-            <div class="form-elements__text-field">
-              <div class="form-elements__title-block input-block">
-                <h3 class="h3-styles">text field</h3>
-                <input class="form-elements__input input input-textfield" type="text" placeholder="Email">
-              </div>
-              <div class="form-elements__title-block input-block">
-                <h3 class="h3-styles">text field</h3>
-                <input class="form-elements__input input form-elements__input_focus input-textfield" type="text" value="This is pretty awesome">
-              </div>
-              <div class="form-elements__title-block input-block">
-                <h3 class="h3-styles">dropdown</h3>
-                <div class="input-block__dropdown dropdown-block">
-                  <input class="form-elements__input input input-dropdown" type="button" value="Сколько гостей"><img src="assets/images/arrow.svg" alt="">
-                </div>
-              </div>
-              <div class="form-elements__title-block input-block">
-                <h3 class="h3-styles">masked text field</h3>
-                <input class="form-elements__input input input-textfield" type="text" placeholder="ДД.ММ.ГГ">
-              </div>
-              <div class="form-elements__title-block form-elements__dropdowns input-block">
-                <div class="form-elements__block">
-                  <h3 class="h3-styles">date dropdown</h3>
-                  <div class="input-block__dropdown dropdown-block">
-                    <input class="form-elements__input input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                </div>
-                <div class="form-elements__block">
-                  <h3 class="h3-styles">date dropdown</h3>
-                  <div class="input-block__dropdown dropdown-block">
-                    <input class="form-elements__input input input-dropdown" type="button" value="19.08.2019"><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__title-block form-elements__filter input-block">
-                <h3 class="h3-styles">filter date dropdown</h3>
-                <div class="input-block__dropdown dropdown-block">
-                  <input class="form-elements__input input input-dropdown" type="button" value="19 авг - 23 авг"><img src="assets/images/arrow.svg" alt="">
-                </div>
-              </div>
-              <div class="form-elements__title-block form-elements__sub input-block">
-                <h3 class="h3-styles">subscription text field</h3>
-                <div class="sub-block">
-                  <input class="form-elements__input input input-textfield" type="text" placeholder="Email">
-                  <svg viewBox="0 0 18 18">
-                    <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="form-elements__buttons">
-              <div class="form-elements__checkbox checkbox-block">
-                <h3 class="h3-styles">checkbox buttons</h3>
-                <div class="checkbox-block__elems">
-                  <div class="checkbox-block__elem">
-                    <input type="checkbox" id="smoke">
-                    <label class="all-styles" for="smoke"> Можно курить                                    </label>
-                  </div>
-                  <div class="checkbox-block__elem">
-                    <input type="checkbox" id="animals">
-                    <label class="all-styles" for="animals"> Можно с питомцами      </label>
-                  </div>
-                  <div class="checkbox-block__elem">
-                    <input type="checkbox" id="guests">
-                    <label class="all-styles" for="guests"> Можно пригласить гостей (до 10 человек)</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__radiobtns radio-btns">
-                <h3 class="h3-styles form-elements__radio-h3">radio buttons</h3>
-                <div class="radio-btns__wrapper">
-                  <div class="radio-btns__block">
-                    <input type="radio" id="male" name="sex" checked="checked">
-                    <label for="male">Мужчина</label>
-                  </div>
-                  <div class="radio-btns__block">
-                    <input type="radio" id="female" name="sex">
-                    <label for="female">Женщина</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__togglebtns toggle-btns">
-                <h3 class="h3-styles form-elements__toggle-h3">toggle</h3>
-                <div class="toggle-btns__wrapper">
-                  <div class="toggle-btns__block">
-                    <input type="checkbox" id="spec-1">
-                    <label for="spec-1">Получать спецпредложения</label>
-                  </div>
-                  <div class="toggle-btns__block">
-                    <input type="checkbox" id="spec-2">
-                    <label for="spec-2">Получать спецпредложения</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__likes like-btns">
-                <h3 class="h3-styles">like button</h3>
-                <div class="like-btns__wrapper">
-                  <button class="like-btns__block">
-                    <div class="like-btns_svg"></div><span class="like-btns__count">2</span>
-                  </button>
-                  <button class="like-btns__block active">
-                    <div class="like-btns_svg"></div><span class="like-btns__count">12</span>
-                  </button>
-                </div>
-              </div>
-              <div class="form-elements__rate-btns rate-btns">
-                <h3 class="h3-styles">rate button</h3>
-                <div class="form-elements__rate-wrapper rate-btns__wrapper">
-                  <div class="rate-btns__block">
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star"> </div>
-                  </div>
-                  <div class="rate-btns__block">
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"> </div>
-                    <div class="rate-btns__star-bg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-elements__morebtns">
-              <div class="form-elements__range-slider range-slider">
-                <div class="range-slider__wrapper">
-                  <div class="form-elements__slider-text range-slider__text">
-                    <h3 class="h3-styles">range slider</h3>
-                    <div class="range-slider__price"> <span>5 000Р </span><span>- </span><span>10 000Р</span></div>
-                  </div>
-                  <div class="range-slider__slider">
-                    <div class="range-slider__slider-track"></div>
-                    <input type="range" id="range-1" min="100" max="17000" value="5000" step="100">
-                    <input type="range" id="range-2" min="100" max="17000" value="10000" step="100">
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__buttons-block buttons-block">
-                <h3 class="buttons-block__h3 h3-styles">buttons</h3>
-                <div class="buttons-block__block">
-                  <button class="buttons-block_first buttons-block_move">click me</button>
-                  <button class="buttons-block_second buttons-block_move">click me</button>
-                  <button class="buttons-block_third buttons-block_move">click me</button>
-                  <button class="buttons-block_fourth buttons-block_move">click me</button>
-                  <button class="buttons-block_fifth buttons-block_move">click me</button>
-                  <button class="buttons-block_sixth buttons-block_move">click me</button>
-                  <button class="buttons-block__payment buttons-block_move arrow-btn"><span>Перейти к оплате</span>
-                    <svg viewBox="0 0 18 18">
-                      <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="form-elements__pagination pagination-block">
-                <h3 class="pagination-block__h3 h3-styles">pagination</h3>
-                <div class="pagination-block__pages">
-                  <div class="pagination-block__page">1</div>
-                  <div class="pagination-block__page">2</div>
-                  <div class="pagination-block__page">3</div>
-                  <div class="pagination-block__dots">...</div>
-                  <div class="pagination-block__page">15</div>
-                  <div class="pagination-block__arrow"> <img src="assets/images/white-arrow.svg" alt=""></div>
-                </div>
-                <div class="pagination-block__text">1 – 12 из 100+ вариантов аренды</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-elements__js">
-            <div class="form-elements__js-wrapper">
-              <div class="form-elements__js-block">
-                <div class="dropdown-block__dropdown">
-                  <h3 class="h3-styles">dropdown</h3>
-                  <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
-                    <input class="form-elements__input input input-dropdown" type="button" value="2 спальни, 2 кровати..."><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                  <div class="dropdown-block__selection selection">
-                    <div class="dropdown-block__selection-wrapper">
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">Спальни</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div>-</div><span class="h3-styles">2</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">кровати</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div>-</div><span class="h3-styles">2</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">ванные комнаты</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__js-block">
-                <div class="dropdown-block__dropdown active">
-                  <h3 class="h3-styles">dropdown</h3>
-                  <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
-                    <input class="form-elements__input input input-dropdown" type="button" value="2 спальни, 2 кровати..."><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                  <div class="dropdown-block__selection selection">
-                    <div class="dropdown-block__selection-wrapper">
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">Спальни</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div>-</div><span class="h3-styles">2</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">кровати</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div>-</div><span class="h3-styles">2</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">ванные комнаты</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-elements__checkbox-block checkbox-block expand-checkbox">
-                  <div class="checkbox-list__top expand-checkbox__top top">
-                    <h3 class="h3-styles">expandable checkbox list</h3><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                  <div class="checkbox-block__elems expand-checkbox__elems selection">
-                    <div class="checkbox-block__wrapper">
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="breakfast">
-                        <label class="all-styles" for="breakfast">Завтрак                                   </label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="desk">
-                        <label class="all-styles" for="desk">Письменный стол     </label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="chair">
-                        <label class="all-styles" for="chair">Стул для кормления</label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="bed">
-                        <label class="all-styles" for="bed">Кроватка</label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="tv">
-                        <label class="all-styles" for="tv">Телевизор</label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="shampoo">
-                        <label class="all-styles" for="shampoo">Шампунь</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-elements__checkbox-block checkbox-block expand-checkbox active">
-                  <div class="checkbox-list__top expand-checkbox__top top">
-                    <h3 class="h3-styles">expandable checkbox list</h3><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                  <div class="checkbox-block__elems expand-checkbox__elems selection">
-                    <div class="checkbox-block__wrapper">
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="breakfast-2">
-                        <label class="all-styles" for="breakfast-2">Завтрак                                   </label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="desk-2">
-                        <label class="all-styles" for="desk-2">Письменный стол     </label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="chair-2">
-                        <label class="all-styles" for="chair-2">Стул для кормления</label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="bed-2">
-                        <label class="all-styles" for="bed-2">Кроватка</label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="tv-2">
-                        <label class="all-styles" for="tv-2">Телевизор</label>
-                      </div>
-                      <div class="checkbox-block__elem expand-checkbox__elem">
-                        <input type="checkbox" id="shampoo-2">
-                        <label class="all-styles" for="shampoo-2">Шампунь</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-elements__js-wrapper">
-              <div class="dropdown-block__dropdown active">
-                <h3 class="h3-styles">dropdown</h3>
-                <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
-                  <input class="form-elements__input input input-dropdown" type="button" value="Сколько гостей"><img src="assets/images/arrow.svg" alt="">
-                </div>
-                <div class="dropdown-block__selection selection">
-                  <div class="dropdown-block__selection-wrapper">
-                    <div class="dropdown-block__option">
-                      <h3 class="h3-styles">взрослые</h3>
-                      <div class="dropdown-block__option-nums">
-                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                        <div>+</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-block__option">
-                      <h3 class="h3-styles">дети</h3>
-                      <div class="dropdown-block__option-nums">
-                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                        <div>+</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-block__option">
-                      <h3 class="h3-styles">младенцы</h3>
-                      <div class="dropdown-block__option-nums">
-                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                        <div>+</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-block__btns">
-                      <div class="dropdown-block__use clean">очистить</div>
-                      <div class="dropdown-block__use use">применить</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__rich-checkbox rich-checkbox">
-                <h3 class="h3-styles">rich Checkbox Buttons</h3>
-                <div class="rich-checkbox__wrapper">
-                  <div class="rich-checkbox__elem checkbox-block__elem">
-                    <input class="checkbox-block__elem" type="checkbox" id="wide-hall">
-                    <label for="wide-hall">
-                      <div class="rich-checkbox__text">
-                        <h2 class="h2-styles rich-checkbox__h2">Широкий коридор</h2>
-                        <p class="rich-checkbox__p">Ширина коридоров в номере не менее 91 см.</p>
-                      </div>
-                    </label>
-                  </div>
-                  <div class="rich-checkbox__elem checkbox-block__elem">
-                    <input class="checkbox-block__elem" type="checkbox" id="help">
-                    <label for="help">
-                      <div class="rich-checkbox__text">
-                        <h2 class="h2-styles rich-checkbox__h2">Помощник для инвалидов</h2>
-                        <p class="rich-checkbox__p">На 1 этаже вас встретит специалист  и проводит до номера.</p>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-elements__js-wrapper">
-              <div class="dropdown-block__dropdown active">
-                <h3 class="h3-styles">dropdown</h3>
-                <div class="input-block__dropdown dropdown-block dropdown-block__aparts top">
-                  <input class="form-elements__input input input-dropdown" type="button" value="3 гостя"><img src="assets/images/arrow.svg" alt="">
-                </div>
-                <div class="dropdown-block__selection selection">
-                  <div class="dropdown-block__selection-wrapper">
-                    <div class="dropdown-block__option">
-                      <h3 class="h3-styles">взрослые</h3>
-                      <div class="dropdown-block__option-nums">
-                        <div>-</div><span class="h3-styles">2</span>
-                        <div>+</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-block__option">
-                      <h3 class="h3-styles">дети</h3>
-                      <div class="dropdown-block__option-nums">
-                        <div>-</div><span class="h3-styles">1</span>
-                        <div>+</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-block__option">
-                      <h3 class="h3-styles">младенцы</h3>
-                      <div class="dropdown-block__option-nums">
-                        <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                        <div>+</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-block__btns">
-                      <div class="dropdown-block__use clean">очистить</div>
-                      <div class="dropdown-block__use use">применить</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-elements__bullet bullet-list">
-                <h3 class="h3-styles">bullet list</h3>
-                <div class="bullet-list__wrapper">
-                  <div class="bullet-list__elem">
-                    <div class="bullet-list__dot"></div><span class="all-styles bullet-list__text">Нельзя с питомцами</span>
-                  </div>
-                  <div class="bullet-list__elem">
-                    <div class="bullet-list__dot"></div><span class="all-styles bullet-list__text">Без вечеринок и мероприятий</span>
-                  </div>
-                  <div class="bullet-list__elem">
-                    <div class="bullet-list__dot"></div><span class="all-styles bullet-list__text">Время прибытия — после 13:00, а выезд до 12:00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-elements__footer">
-            <div class="form-elements__footer_left-block">
-              <div class="form-elements__footer-smiles smiles-block">
-                <div class="smiles-block__img"><img src="assets/images/comfort.svg" alt=""></div>
-                <div class="smiles-block__text">
-                  <h3 class="smiles-block__h3">Комфорт</h3>
-                  <p class="smiles-block__p">Шумопоглощающие стены</p>
-                </div>
-              </div>
-              <div class="form-elements__footer-smiles smiles-block">
-                <div class="smiles-block__img"><img src="assets/images/house.svg" alt=""></div>
-                <div class="smiles-block__text">
-                  <h3 class="smiles-block__h3">Удобство</h3>
-                  <p class="smiles-block__p">Окно в каждой из спален</p>
-                </div>
-              </div>
-            </div>
-            <div class="form-elements__footer_right-block">
-              <div class="form-elements__footer-comments comments-block">
-                <div class="comments-block__info">
-                  <div class="comments-block__img"><img src="assets/images/murad.png" alt=""></div>
-                  <div class="comments-block__name">
-                    <h3 class="comments-block__h3">Мурад Сарафанов</h3><span class="comments-block__days">5 дней назад</span>
-                  </div>
-                </div>
-                <div class="comments-block__comment">
-                  <button class="like-btns__block active">
-                    <div class="like-btns_svg"></div><span class="like-btns__count">12</span>
-                  </button>
-                  <p class="all-styles">
-                    Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
-                    И стены, действительно, шумоподавляющие. 
-                    Выкрикивал комплименты повару — никто не жаловался из соседей.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="footer__sub-footer sub-footer">
+    <div class="container__content">
+      <div class="sub-footer__content">
+        <p class="sub-footer__info">Copyright © 2018 Toxin отель. Все права защищены.</p>
+        <div class="sub-footer__media"><a class="sub-footer__img" href=""><img src="assets/images/twitter.svg" alt=""></a><a class="sub-footer__img" href=""><img src="assets/images/facebook.svg" alt=""></a><a class="sub-footer__img" href=""><img src="assets/images/instagram.svg" alt=""></a></div>
       </div>
-    </section>
-    <section class="cards">
-      <div class="container__wrapper">
-        <div class="logo"><img src="assets/images/logo.png" alt=""></div>
-        <div class="container__content">
-          <div class="cards__content">       
-            <div class="cards__block">
-              <div class="find-room cards__find-room">
-                <h1 class="h1-styles">Найдём номера под ваши пожелания</h1>
-                <div class="find-room__dates input-date">
-                  <div class="find-room__date">
-                    <h3 class="h3-styles">прибытие</h3>
-                    <div class="dropdown-block">
-                      <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
-                    </div>
-                  </div>
-                  <div class="find-room__date">
-                    <h3 class="h3-styles">выезд</h3>
-                    <div class="dropdown-block">
-                      <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
-                    </div>
-                  </div>
-                </div>
-                <div class="dropdown-block__dropdown find-room__guests">
-                  <h3 class="h3-styles">гости</h3>
-                  <div class="input-block__dropdown dropdown-block top">
-                    <input class="form-elements__input input input-dropdown" type="button" value="Сколько гостей"><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                  <div class="dropdown-block__selection selection">
-                    <div class="dropdown-block__selection-wrapper">
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">взрослые</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">дети</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">младенцы</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__btns">
-                        <div class="dropdown-block__use clean">очистить</div>
-                        <div class="dropdown-block__use use">применить</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="find-room__btn">
-                  <button class="arrow-btn"><span>Подобрать номер</span>
-                    <svg viewBox="0 0 18 18">
-                      <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="cards__signup signup">
-                <h1 class="h1-styles">Регистрация аккаунта</h1>
-                <div class="signup__name">
-                  <input class="input" placeholder="Имя">
-                  <input class="input" placeholder="Фамилия">
-                </div>
-                <div class="radio-btns__wrapper signup__radio-btns">
-                  <div class="radio-btns__block">
-                    <input type="radio" id="male-main" name="sex-main" checked="checked">
-                    <label for="male-main">Мужчина</label>
-                  </div>
-                  <div class="radio-btns__block">
-                    <input type="radio" id="female-main" name="sex-main">
-                    <label for="female-main">Женщина</label>
-                  </div>
-                </div>
-                <div class="signup__date">
-                  <h3 class="h3-styles">дата рождения</h3>
-                  <div class="dropdown-block input-date">
-                    <input class="input input-dropdown" type="button" value="ДД.ММ.ГГ"><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                </div>
-                <div class="signup__info">
-                  <h3 class="h3-styles">данные для входа в сервис</h3>
-                  <input class="input" placeholder="Email">
-                  <input class="input" placeholder="Пароль">
-                  <div class="toggle-btns__block signup__toggle-btns">
-                    <input type="checkbox" id="spec-main">
-                    <label for="spec-main">Получать спецпредложения</label>
-                  </div>
-                </div>
-                <button class="arrow-btn signup__btn"><span>Перейти к оплате</span>
-                  <svg viewBox="0 0 18 18">
-                    <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"> </path>
-                  </svg>
-                </button>
-                <div class="check-account signup__check"><span>Уже есть аккаунт на Toxin</span>
-                  <button class="buttons-block_third">войти</button>
-                </div>
-              </div>
-            </div>
-            <div class="cards__block">
-              <div class="cards__booking booking">
-                <div class="booking__top">
-                  <div class="booking__top-block">
-                    <div>№ <span>888</span> <span>люкс</span></div>
-                    <div>9 990P <span>в сутки</span></div>
-                  </div>
-                </div>
-                <div class="booking__dates input-date">
-                  <div class="booking__date">
-                    <h3 class="h3-styles">прибытие</h3>
-                    <div class="dropdown-block">
-                      <input class="input input-dropdown" type="button" value="19.08.2019"><img src="assets/images/arrow.svg" alt="">
-                    </div>
-                  </div>
-                  <div class="booking__date">
-                    <h3 class="h3-styles">выезд</h3>
-                    <div class="dropdown-block">
-                      <input class="input input-dropdown" type="button" value="23.08.2019"><img src="assets/images/arrow.svg" alt="">
-                    </div>
-                  </div>
-                </div>
-                <div class="dropdown-block__dropdown booking__guests">
-                  <h3 class="h3-styles">гости</h3>
-                  <div class="input-block__dropdown dropdown-block top">
-                    <input class="form-elements__input input input-dropdown" type="button" value="3 гостя"><img src="assets/images/arrow.svg" alt="">
-                  </div>
-                  <div class="dropdown-block__selection selection">
-                    <div class="dropdown-block__selection-wrapper">
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">взрослые</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">2</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">дети</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">1</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__option">
-                        <h3 class="h3-styles">младенцы</h3>
-                        <div class="dropdown-block__option-nums">
-                          <div class="dropdown-block__disabled-btn">-</div><span class="h3-styles">0</span>
-                          <div>+</div>
-                        </div>
-                      </div>
-                      <div class="dropdown-block__btns">
-                        <div class="dropdown-block__use clean">очистить</div>
-                        <div class="dropdown-block__use use">применить</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booking__info">
-                  <div class="booking__info-block"><span>9 990₽ х 4 суток</span><span>39 960P</span></div>
-                  <div class="booking__info-block"><span>Сбор за услуги: скидка 2 179₽</span><span class="booking__svg"><img src="assets/images/mark.svg"></span><span>0P</span></div>
-                  <div class="booking__info-block"><span>Сбор за дополнительные <br> услуги</span><span class="booking__svg"><img src="assets/images/mark.svg"></span><span>300P</span></div>
-                </div>
-                <div class="booking__price"><span>Итого</span><span class="dots"> </span><span>38 081P</span></div>
-                <div class="booking__btn">
-                  <button class="arrow-btn"><span>Забронировать</span>
-                    <svg viewBox="0 0 18 18">
-                      <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="cards__signin signin">
-                <h1 class="h1-styles">Войти</h1>
-                <div class="signin__auth">
-                  <input class="input" placeholder="Email">
-                  <input class="input" placeholder="Пароль">
-                </div>
-                <div class="signin__btn">
-                  <button class="arrow-btn"><span>Войти</span>
-                    <svg viewBox="0 0 18 18">
-                      <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div class="check-account signin__check"><span>Нет аккаунта на Toxin?</span>
-                  <button class="buttons-block_third">создать</button>
-                </div>
-              </div>
-            </div>
-            <div class="cards__block">
-              <div class="cards__date date">
-                <div class="date__wrapper input-date">
-                  <input class="one" type="hidden">
-                  <input class="one" type="hidden">
-                </div>
-              </div>
-              <div class="cards__item">
-                <div class="item item-one">
-                  <div class="item__wrapper">
-                    <div class="item__img-block">
-                      <div class="item__slides slides">
-                        <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
-                        <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
-                        <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
-                        <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-1.jpg" alt=""></div>
-                      </div>
-                      <div class="item__arrows">
-                        <div class="item__arrow left">
-                          <svg viewBox="0 0 12 8">
-                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
-                          </svg>
-                        </div>
-                        <div class="item__arrow right">
-                          <svg viewBox="0 0 12 8">
-                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="item__dots dots">
-                        <div class="active" data-slider="1"> </div>
-                        <div data-slider="2"> </div>
-                        <div data-slider="3"> </div>
-                        <div data-slider="4"> </div>
-                      </div>
-                    </div>
-                    <div class="item__content">
-                      <div class="item__top-block">
-                        <div>№<span> 888</span><span>люкс</span></div>
-                        <div>9 990P <span>в сутки</span></div>
-                      </div>
-                      <div class="item__rating">
-                        <div class="item__stars">
-                          <div class="full-star"> </div>
-                          <div class="full-star"> </div>
-                          <div class="full-star"> </div>
-                          <div class="full-star"> </div>
-                          <div class="full-star"></div>
-                        </div>
-                        <div class="item__reviews">
-                          <div><span>145</span> Отзывов</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item item-two">
-                  <div class="item__wrapper">
-                    <div class="item__img-block">
-                      <div class="item__slides slides">
-                        <div class="item__img active" data-slider="1"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
-                        <div class="item__img" data-slider="2"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
-                        <div class="item__img" data-slider="3"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
-                        <div class="item__img" data-slider="4"><img src="assets/images/slider-picture-2.jpg" alt=""></div>
-                      </div>
-                      <div class="item__dots dots">
-                        <div class="active" data-slider="1"> </div>
-                        <div data-slider="2"> </div>
-                        <div data-slider="3"> </div>
-                        <div data-slider="4"> </div>
-                      </div>
-                    </div>
-                    <div class="item__content">
-                      <div class="item__top-block">
-                        <div>№<span> 840</span> <span></span></div>
-                        <div>9 990P <span>в сутки</span></div>
-                      </div>
-                      <div class="item__rating">
-                        <div class="item__stars">
-                          <div class="full-star"> </div>
-                          <div class="full-star"> </div>
-                          <div class="full-star"> </div>
-                          <div class="full-star"> </div>
-                          <div class="half-star"></div>
-                        </div>
-                        <div class="item__reviews">
-                          <div><span>65</span> Отзывов</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="headers-footers">
-      <div class="container__wrapper">
-        <div class="logo"><img src="assets/images/logo.png" alt=""></div>
-      </div>
-      <div class="headers-footers__header-signup header-signup">
-        <div class="container__content">
-          <div class="header-signup__content">
-            <div class="header-signup__logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
-            <ul class="header-signup__menu">
-              <div class="header-signup__link active"><a href="">О нас</a></div>
-              <div class="header-signup__link"><a href="">Услуги</a><img src="assets/images/arrow.svg" alt=""></div>
-              <div class="header-signup__link"><a href="">Вакансии</a></div>
-              <div class="header-signup__link"><a href="">Новости</a></div>
-              <div class="header-signup__link"><a href="">Соглашения</a><img src="assets/images/arrow.svg" alt=""></div>
-            </ul>
-            <div class="header-signup__btns">
-              <button class="buttons-block_third header-signup__signin-btn">Войти</button>
-              <button class="buttons-block_first header-signup__signup-btn">Зарегистрироваться</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="headers-footers__header-signup header-signup header-signup_width">
-        <div class="container__content">
-          <div class="header-signup__content">
-            <div class="header-signup__logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
-            <ul class="header-signup__menu">
-              <div class="header-signup__link active"><a href="">О нас</a></div>
-              <div class="header-signup__link"><a href="">Услуги</a><img src="assets/images/arrow.svg" alt=""></div>
-              <div class="header-signup__link"><a href="">Вакансии</a></div>
-              <div class="header-signup__link"><a href="">Новости</a></div>
-              <div class="header-signup__link"><a href="">Соглашения</a><img src="assets/images/arrow.svg" alt=""></div>
-            </ul>
-            <div class="header-signup__name"><span>Юлий Цезарь</span></div>
-          </div>
-        </div>
-      </div>
-      <footer class="headers-footers__footer footer">
-        <div class="container__content">
-          <div class="footer__content">
-            <div class="footer__logo-block">
-              <div class="footer__logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
-              <div class="footer__logo-info">
-                <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
-              </div>
-            </div>
-            <div class="footer__menu-block">
-              <h3 class="h3-styles footer__menu-title">навигация</h3><a href="">О нас</a><a href="">Новости</a><a href="">Служба поддержки</a><a href="">Услуги</a>
-            </div>
-            <div class="footer__menu-block">
-              <h3 class="h3-styles footer__menu-title">о нас</h3><a href="">О сервисе</a><a href="">Наша команда</a><a href="">Вакансии</a><a href="">Инвесторы</a>
-            </div>
-            <div class="footer__menu-block">
-              <h3 class="h3-styles footer__menu-title">служба поддержки</h3><a href="">Соглашения</a><a href="">Сообщества</a><a href="">Связь с нами</a>
-            </div>
-            <div class="footer__subscription">
-              <h3 class="h3-styles footer__menu-title">подписка</h3>
-              <div class="footer__subscription-info">
-                <p>Получайте специальные предложения и новости сервиса</p>
-              </div>
-              <div class="input-block">
-                <div class="sub-block">
-                  <input class="input input-textfield" type="text" placeholder="Email">
-                  <svg viewBox="0 0 18 18">
-                    <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer__sub-footer sub-footer">
-          <div class="container__content">
-            <div class="sub-footer__content">
-              <p class="sub-footer__info">Copyright © 2018 Toxin отель. Все права защищены.</p>
-              <div class="sub-footer__media"><a class="sub-footer__img" href=""><img src="assets/images/twitter.svg" alt=""></a><a class="sub-footer__img" href=""><img src="assets/images/facebook.svg" alt=""></a><a class="sub-footer__img" href=""><img src="assets/images/instagram.svg" alt=""></a></div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <footer class="mobile-footer">
-        <div class="mobile-footer__content">
-          <div class="mobile-footer_logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
-          <div class="mobile-footer__text"><span>Copyright © 2018 Toxin отель. Все права защищены.</span></div>
-          <div class="mobile-footer__media"><a class="mobile-footer__img" href=""><img src="assets/images/twitter.svg" alt=""></a><a class="mobile-footer__img" href=""><img src="assets/images/facebook.svg" alt=""></a><a class="mobile-footer__img" href=""><img src="assets/images/instagram.svg" alt=""></a></div>
-        </div>
-      </footer>
-    </section>
-    <script src="./main.bundle.js"></script>
-  </body>
+    </div>
+  </div>
+</footer>
+<footer class="mobile-footer">
+  <div class="mobile-footer__content">
+    <div class="mobile-footer_logo"><img src="assets/images/headers-footers-logo.svg" alt=""></div>
+    <div class="mobile-footer__text"><span>Copyright © 2018 Toxin отель. Все права защищены.</span></div>
+    <div class="mobile-footer__media"><a class="mobile-footer__img" href=""><img src="assets/images/twitter.svg" alt=""></a><a class="mobile-footer__img" href=""><img src="assets/images/facebook.svg" alt=""></a><a class="mobile-footer__img" href=""><img src="assets/images/instagram.svg" alt=""></a></div>
+  </div>
+</footer>
+  <script src="./js/components/burger-menu/burger-menu.js"></script>
+  <script src="js/components/date/date.js"></script>
+  <script src="js/components/form-elements/dropdown-block.js"></script>
 </html>

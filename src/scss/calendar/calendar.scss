@@ -3,6 +3,14 @@
     padding: 0 10px;
     width: 320px - 24px;
     --adp-day-cell-height: 40px;
+    z-index: 10000;
+    @media screen and (max-width: 576px) {
+        width: 269px;
+        --adp-day-cell-height: 32px;
+    }
+    @media screen and (max-width: 370px) {
+        width: 250px;
+    }
     &--pointer {
         display: none;
     }

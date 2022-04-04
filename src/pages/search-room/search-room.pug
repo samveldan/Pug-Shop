@@ -1,0 +1,526 @@
+extends ../../blocks/template/template.pug
+
+block title
+    title Выбор комнаты
+block content
+    section.search-room
+        .container__content
+            .search-room__content
+                .search-room__filters
+                    .input-block.search-room__dates.input-date.search-date
+                        h3.h3-styles даты пребывания в отеле
+                        .input-block__dropdown.dropdown-block
+                            input(type="button", value="19 авг - 23 авг").input.input-dropdown
+                            input(type="hidden")
+                            img(src="assets/images/arrow.svg", alt="")
+                    .dropdown-block__dropdown.search-room__guests
+                        h3.h3-styles гости
+                        .input-block__dropdown.dropdown-block.dropdown-block__aparts.top
+                            input(type="button", value="3 гостя, 1 младенцы").form-elements__input.input.input-dropdown
+                            img(src="assets/images/arrow.svg", alt="")
+                        .dropdown-block__selection.selection
+                            .dropdown-block__selection-wrapper
+                                .dropdown-block__option
+                                    h3.h3-styles взрослые
+                                    .dropdown-block__option-nums
+                                        div -
+                                        span.h3-styles 2
+                                        div +
+                                .dropdown-block__option
+                                    h3.h3-styles дети
+                                    .dropdown-block__option-nums
+                                        div -
+                                        span.h3-styles 1
+                                        div +
+                                .dropdown-block__option
+                                    h3.h3-styles младенцы
+                                    .dropdown-block__option-nums
+                                        div.dropdown-block__disabled-btn -
+                                        span.h3-styles 1
+                                        div +
+                                .dropdown-block__btns
+                                    .dropdown-block__use.clean очистить
+                                    .dropdown-block__use.use применить
+                    .range-slider.search-room__range-slider
+                        .range-slider__wrapper
+                            .range-slider__text
+                                h3.h3-styles диапазон цены
+                                div.range-slider__price 
+                                    span 5 000Р 
+                                    span - 
+                                    span 10 000Р
+                            .range-slider__slider.search-room__slider
+                                .range-slider__slider-track
+                                input(type="range", id="range-1", min=100, max=17000, value=5000, step=100)
+                                input(type="range", id="range-2", min=100, max=17000, value=10000, step=100)
+                            .range-slider__under-text.search-room__under-text
+                                span Стоимость за сутки пребывания в номере
+                    .checkbox-block.search-room__checkbox
+                        h3.h3-styles правила дома
+                        .checkbox-block__elems
+                            .checkbox-block__elem
+                                input(type="checkbox", id="smoke")
+                                label(for="smoke").all-styles  Можно курить                                    
+                            .checkbox-block__elem
+                                input(type="checkbox", id="animals", checked)
+                                label(for="animals").all-styles  Можно с питомцами      
+                            .checkbox-block__elem
+                                input(type="checkbox", id="guests", checked)
+                                label(for="guests").all-styles  Можно пригласить гостей <br> (до 10 человек)
+                    .rich-checkbox.search-room__rich-checkbox
+                        h3.h3-styles доступность
+                        .rich-checkbox__wrapper
+                            .rich-checkbox__elem.checkbox-block__elem
+                                input(type="checkbox", id="wide-hall").checkbox-block__elem
+                                label(for="wide-hall")
+                                    .rich-checkbox__text
+                                        h2.h2-styles.rich-checkbox__h2 Широкий коридор
+                                        p.rich-checkbox__p Ширина коридоров в номере не менее 91 см.
+                            .rich-checkbox__elem.checkbox-block__elem
+                                input(type="checkbox", id="help").checkbox-block__elem
+                                label(for="help")
+                                    .rich-checkbox__text
+                                        h2.h2-styles.rich-checkbox__h2 Помощник для инвалидов
+                                        p.rich-checkbox__p На 1 этаже вас встретит специалист  и проводит до номера.
+                    .dropdown-block__dropdown.search-room__comfort
+                        h3.h3-styles удобства номера
+                        .input-block__dropdown.dropdown-block.dropdown-block__aparts.top
+                            input(type="button", value="2 спальни, 2 кровати...").form-elements__input.input.input-dropdown
+                            img(src="assets/images/arrow.svg", alt="")
+                        .dropdown-block__selection.selection
+                            .dropdown-block__selection-wrapper
+                                .dropdown-block__option
+                                    h3.h3-styles Спальни
+                                    .dropdown-block__option-nums
+                                        div -
+                                        span.h3-styles 2
+                                        div +
+                                .dropdown-block__option
+                                    h3.h3-styles кровати
+                                    .dropdown-block__option-nums
+                                        div -
+                                        span.h3-styles 2
+                                        div +
+                                .dropdown-block__option
+                                    h3.h3-styles ванные комнаты
+                                    .dropdown-block__option-nums
+                                        div.dropdown-block__disabled-btn -
+                                        span.h3-styles 0
+                                        div +
+                    .checkbox-block.expand-checkbox.search-room__more-comfort
+                        .checkbox-list__top.expand-checkbox__top.top
+                            h3.h3-styles дополнительные удобства
+                            img(src="assets/images/arrow.svg", alt="")
+                        .checkbox-block__elems.expand-checkbox__elems.selection
+                            .checkbox-block__wrapper
+                                .checkbox-block__elem.expand-checkbox__elem
+                                    input(type="checkbox", id="breakfast")
+                                    label(for="breakfast").all-styles Завтрак                                   
+                                .checkbox-block__elem.expand-checkbox__elem
+                                    input(type="checkbox", id="desk")
+                                    label(for="desk").all-styles Письменный стол     
+                                .checkbox-block__elem.expand-checkbox__elem
+                                    input(type="checkbox", id="chair")
+                                    label(for="chair").all-styles Стул для кормления
+                                .checkbox-block__elem.expand-checkbox__elem
+                                    input(type="checkbox", id="bed")
+                                    label(for="bed").all-styles Кроватка
+                                .checkbox-block__elem.expand-checkbox__elem
+                                    input(type="checkbox", id="tv")
+                                    label(for="tv").all-styles Телевизор
+                                .checkbox-block__elem.expand-checkbox__elem
+                                    input(type="checkbox", id="shampoo")
+                                    label(for="shampoo").all-styles Шампунь
+                .search-room__rooms
+                    h1.h1-styles Номера, которые мы для вас подобрали
+                    .filter-sign
+                        img(src="assets/images/filter.svg", alt="")
+                        .filter-sign__text Фильтры
+                    .search-room__items
+                        .search-room__items-block
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-1.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-1.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-1.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-1.jpg", alt="")
+                                        .item__arrows
+                                            .item__arrow.left
+                                                svg(viewBox="0 0 12 8")
+                                                    path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                                            .item__arrow.right
+                                                svg(viewBox="0 0 12 8")
+                                                    path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 888 </span><span>люкс</span>
+                                            div 9 990P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star
+                                            .item__reviews
+                                                div <span>145</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-2.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-2.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-2.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-2.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 840</span> <span></span>
+                                            div 9 990P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>65</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-3.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-3.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-3.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-3.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 980</span><span> люкс</span>
+                                            div 8 500P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>35</span> Отзывов
+                        .search-room__items-block
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-4.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-4.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-4.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-4.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 856</span><span></span>
+                                            div 7 300P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star
+                                            .item__reviews
+                                                div <span>145</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-5.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-5.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-5.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-5.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 740</span> <span></span>
+                                            div 6 000P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>44</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-6.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-6.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-6.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-6.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 982</span> <span></span>
+                                            div 5 800P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>56</span> Отзывов
+                        .search-room__items-block
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-7.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-7.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-7.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-7.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 678</span><span></span>
+                                            div 5 500P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star
+                                            .item__reviews
+                                                div <span>45</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-8.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-8.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-8.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-8.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 450</span> <span></span>
+                                            div 5 300P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>39</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-9.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-9.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-9.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-9.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 350</span> <span></span>
+                                            div 5 000P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>77</span> Отзывов
+                        .search-room__items-block
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-10.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-10.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-10.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-10.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 666</span><span></span>
+                                            div 5 000P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star
+                                            .item__reviews
+                                                div <span>25</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-11.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-11.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-11.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-11.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 444</span> <span></span>
+                                            div 5 000P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>15</span> Отзывов
+                            .item.search-room__item
+                                .item__wrapper
+                                    .item__img-block
+                                        .item__slides.slides
+                                            div(data-slider="1").item__img.active
+                                                img(src="assets/images/slider-picture-12.jpg", alt="")
+                                            div(data-slider="2").item__img
+                                                img(src="assets/images/slider-picture-12.jpg", alt="")
+                                            div(data-slider="3").item__img
+                                                img(src="assets/images/slider-picture-12.jpg", alt="")
+                                            div(data-slider="4").item__img
+                                                img(src="assets/images/slider-picture-12.jpg", alt="")
+                                        .item__dots.dots
+                                            div(data-slider="1").active 
+                                            div(data-slider="2") 
+                                            div(data-slider="3") 
+                                            div(data-slider="4") 
+                                    a(href="room-details.html").item__content.search-room__item-content
+                                        .item__top-block
+                                            div №<span> 352</span> <span></span>
+                                            div 5 0000P <span>в сутки</span>
+                                        .item__rating
+                                            .item__stars
+                                                div.full-star 
+                                                div.full-star 
+                                                div.full-star 
+                                                div.half-star 
+                                                div.half-star
+                                            .item__reviews
+                                                div <span>55</span> Отзывов
+                        .pagination-block.search-room__pagination
+                            .pagination-block__pages
+                                .pagination-block__page 1
+                                .pagination-block__page 2
+                                .pagination-block__page 3
+                                .pagination-block__dots ...
+                                .pagination-block__page 15
+                                .pagination-block__arrow 
+                                    img(src="assets/images/white-arrow.svg", alt="")
+                            .pagination-block__text 1 – 12 из 100+ вариантов аренды
+append scripts
+    script(src="./js/components/cards/slider.js")
+    script(src="./js/components/date/date.js")
+    script(src="./js/components/form-elements/dropdown-block.js")
+    script(src="./js/components/form-elements/range-slider.js")
+    script(src="./js/components/filter/filter.js")

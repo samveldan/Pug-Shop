@@ -351,9 +351,9 @@ template {
   display: none;
 }
 
-/*!****************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss ***!
-  \****************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -367,7 +367,6 @@ a {
 label {
   cursor: pointer;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -585,7 +584,8 @@ label {
   border-radius: var(--adp-border-radius);
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 .air-datepicker-nav--action:hover {
@@ -1280,6 +1280,11 @@ label {
   line-height: 29px;
   color: #1F2041;
 }
+@media screen and (max-width: 576px) {
+  .h1-styles {
+    font-size: 22px;
+  }
+}
 
 .h2-styles {
   font-family: "Montserrat";
@@ -1322,11 +1327,27 @@ label {
   margin-top: 5px;
   width: 100%;
 }
+@media screen and (max-width: 576px) {
+  .input {
+    padding: 10px 14px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .input {
+    font-size: 13px;
+  }
+}
 .input:hover {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 .input:focus {
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input::-moz-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.input:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
 }
 .input::placeholder {
   color: rgba(31, 32, 65, 0.25);
@@ -1512,7 +1533,6 @@ label {
   width: 40px;
   height: 20px;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1579,6 +1599,12 @@ label {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 450px) {
+  .range-slider__text {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
 .range-slider__price {
   font-family: "Montserrat";
   font-style: normal;
@@ -1588,6 +1614,11 @@ label {
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
 }
+@media screen and (max-width: 450px) {
+  .range-slider__price {
+    margin-top: 10px;
+  }
+}
 .range-slider__slider {
   position: relative;
 }
@@ -1596,10 +1627,13 @@ label {
   top: 0;
   bottom: 0;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .range-slider__slider input::-webkit-slider-thumb {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   cursor: pointer;
   height: 16px;
   width: 16px;
@@ -1609,7 +1643,8 @@ label {
   margin-top: -3px;
 }
 .range-slider__slider input::-webkit-slider-runnable-track {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   height: 4px;
 }
 .range-slider__slider-track {
@@ -1794,7 +1829,6 @@ label {
   align-items: center;
   cursor: pointer;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1844,19 +1878,18 @@ label {
 .expand-checkbox {
   cursor: pointer;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 .expand-checkbox__top {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .expand-checkbox__top img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 13px;
+  margin-left: 24px;
+  margin-right: 15px;
 }
 .expand-checkbox .selection {
   margin-top: 0px;
@@ -1865,7 +1898,7 @@ label {
   margin-top: 15px;
 }
 .expand-checkbox.active img {
-  transform: translateY(-50%) rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .rich-checkbox__h2 {
@@ -1874,6 +1907,11 @@ label {
   font-weight: 700;
   font-size: 14px;
   color: rgba(31, 32, 65, 0.75);
+}
+@media screen and (max-width: 450px) {
+  .rich-checkbox__h2 {
+    line-height: 15px;
+  }
 }
 .rich-checkbox input {
   opacity: 0;
@@ -2109,6 +2147,30 @@ label {
   max-width: 380px;
   padding: 35px 30px;
 }
+@media screen and (max-width: 576px) {
+  .find-room {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px 30px;
+  }
+  .find-room .dropdown-block {
+    min-width: 170px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .find-room .dropdown-block {
+    min-width: 140px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .find-room {
+    max-width: 100%;
+    padding: 25px 27px;
+  }
+  .find-room .dropdown-block {
+    min-width: 120px;
+  }
+}
 .find-room h1 {
   margin: 0;
   margin-bottom: 24px;
@@ -2128,7 +2190,7 @@ label {
 }
 
 .signup {
-  padding: 35px 30px;
+  padding: 23px 30px 30px 30px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -2300,6 +2362,7 @@ label {
   border-radius: 4px;
   max-width: 271px;
   font-family: "Montserrat";
+  margin: 5px;
 }
 .item__img-block {
   position: relative;
@@ -2451,6 +2514,18 @@ label {
   padding: 0 10px;
   width: 296px;
   --adp-day-cell-height: 40px;
+  z-index: 10000;
+}
+@media screen and (max-width: 576px) {
+  .air-datepicker {
+    width: 269px;
+    --adp-day-cell-height: 32px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .air-datepicker {
+    width: 250px;
+  }
 }
 .air-datepicker--pointer {
   display: none;
@@ -2590,13 +2665,18 @@ label {
   justify-content: space-between;
   align-items: center;
 }
+.header-signup__btns {
+  display: flex;
+  align-items: center;
+}
 .header-signup__menu {
   display: flex;
   align-items: center;
-  width: 61%;
+  width: 64%;
   justify-content: flex-end;
 }
-.header-signup__menu a {
+.header-signup__menu a, .header-signup__menu-more-lists {
+  cursor: pointer;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -2613,12 +2693,10 @@ label {
 .header-signup__link {
   margin-right: 25px;
 }
-.header-signup__link img {
+.header-signup__link svg {
+  width: 12px;
   margin-left: 5px;
   cursor: pointer;
-}
-.header-signup__link:last-child {
-  margin-right: 0px;
 }
 .header-signup__link.active a {
   color: rgba(31, 32, 65, 0.75);
@@ -2653,6 +2731,16 @@ label {
   font-family: "Montserrat";
   font-style: normal;
 }
+@media screen and (max-width: 992px) {
+  .footer {
+    padding-top: 70px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .footer {
+    display: none;
+  }
+}
 .footer__content {
   display: flex;
   justify-content: space-between;
@@ -2670,11 +2758,22 @@ label {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
 }
+@media screen and (max-width: 992px) {
+  .footer__logo-info p {
+    font-size: 13px;
+  }
+}
 .footer__menu-block {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
   width: 14%;
+}
+@media screen and (max-width: 992px) {
+  .footer__menu-block {
+    width: 22%;
+    margin-left: 15px;
+  }
 }
 .footer__menu-block a {
   font-size: 14px;
@@ -2726,6 +2825,13 @@ label {
   font-weight: 400;
   font-size: 14px;
   color: rgba(31, 32, 65, 0.75);
+  display: none;
+}
+@media screen and (max-width: 760px) {
+  .mobile-footer {
+    display: block;
+    padding: 30px 0px;
+  }
 }
 .mobile-footer__content {
   max-width: 50%;
@@ -2734,6 +2840,12 @@ label {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 760px) {
+  .mobile-footer__content {
+    max-width: 100%;
+    margin: 0 15px;
+  }
+}
 .mobile-footer__media {
   width: 30%;
   display: flex;
@@ -2741,4 +2853,641 @@ label {
 }
 .mobile-footer__text {
   margin: 23px 0;
+}
+
+.burger {
+  display: none;
+  width: 35px;
+  height: 25px;
+  position: relative;
+}
+.burger div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #333;
+  transition: 0.3s all;
+}
+.burger::before, .burger:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  transform: translateY(-50%);
+  transition: 0.3s all;
+}
+.burger:after {
+  top: 100%;
+}
+.burger.active div {
+  top: 50%;
+  transform: translateY(-50%) rotate(-40deg);
+}
+.burger.active:after {
+  top: 50%;
+  transform: translateY(-50%) rotate(40deg);
+}
+.burger.active:before {
+  content: "";
+  display: none;
+}
+@media screen and (max-width: 950px) {
+  .burger {
+    display: block;
+  }
+}
+
+.burger-menu {
+  display: flex;
+  z-index: 999999999;
+}
+@media screen and (max-width: 950px) {
+  .burger-menu {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 0.3s;
+    transform: translateX(-110%);
+    flex-direction: column;
+    min-height: 100vh;
+    width: 55vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: black;
+    text-align: center;
+  }
+  .burger-menu.active {
+    transform: translateX(0);
+  }
+  .burger-menu .header-signup__item-wrapper {
+    width: 120px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .burger-menu .header-signup__menu {
+    width: 100%;
+    flex-direction: column;
+  }
+  .burger-menu .header-signup__menu a {
+    display: inline-block;
+    color: #fff;
+    padding: 10% 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 600px) {
+  .burger-menu .header-signup__menu a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .burger-menu .header-signup__menu-more-lists {
+    display: inline-block;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 600px) {
+  .burger-menu .header-signup__menu-more-lists {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .burger-menu .header-signup__lists {
+    padding: 10% 0;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 950px) {
+  .burger-menu .header-signup__link {
+    margin-right: 0px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+  }
+  .burger-menu .header-signup__link svg path {
+    fill: #fff;
+  }
+}
+@media screen and (max-width: 950px) {
+  .burger-menu .header-signup__btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+  .burger-menu .header-signup__btns a {
+    border: 1px solid #333;
+    padding: 7% 0;
+    width: 100%;
+  }
+  .burger-menu .header-signup__btns a div {
+    font-weight: 400;
+    margin-right: 0px;
+    border: 0;
+    color: #fff;
+    border-radius: 0;
+    background: transparent;
+    width: 120px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 600px) {
+  .burger-menu .header-signup__btns a div {
+    font-size: 10px;
+  }
+}
+
+.main {
+  background-image: url("../assets/images/landing-page-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.main__content {
+  padding: 70px 0px 380px 0px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .main__content {
+    padding: 70px 0px 300px 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main__content {
+    padding: 50px 0px 200px 0px;
+  }
+}
+.main_small-text {
+  position: absolute;
+  bottom: 18px;
+  right: 0;
+  text-align: right;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.main_small-text p {
+  line-height: 24px;
+}
+@media screen and (max-width: 576px) {
+  .main_small-text p {
+    color: #fff;
+  }
+}
+
+.sign-in {
+  background-image: url("../assets/images/auth-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 172px 0px;
+}
+@media screen and (max-width: 992px) {
+  .sign-in {
+    padding: 100px 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sign-in {
+    padding: 50px 0px;
+  }
+  .sign-in .buttons-block_third {
+    padding: 11px 14px;
+  }
+}
+.sign-in__block {
+  margin: 0 auto;
+}
+
+.sign-up {
+  background-image: url("../assets/images/auth-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 0px;
+}
+.sign-up__block {
+  margin: 0 auto;
+}
+
+.search-room h1 {
+  margin: 0;
+}
+@media screen and (max-width: 900px) {
+  .search-room h1 {
+    text-align: center;
+  }
+}
+.search-room__content {
+  display: flex;
+  margin-top: 30px;
+}
+.search-room__under-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-top: 44px;
+}
+.search-room__filters {
+  box-sizing: border-box;
+  max-width: 23%;
+  min-width: 245px;
+}
+@media screen and (max-width: 900px) {
+  .search-room__filters {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+    overflow-y: scroll;
+    z-index: 999;
+    background-color: #fff;
+    padding: 50px 20px;
+    transform: translateX(-110%);
+    transition: 0.3s all;
+  }
+  .search-room__filters.active {
+    transform: translateX(0%);
+  }
+}
+.search-room__guests {
+  margin-top: 23px;
+}
+.search-room__range-slider {
+  margin-top: 30px;
+}
+.search-room__slider {
+  margin-top: 23px;
+}
+.search-room__checkbox {
+  margin-top: 30px;
+}
+.search-room__rich-checkbox {
+  margin-top: 22px;
+}
+.search-room__comfort {
+  margin-top: 30px;
+}
+.search-room__more-comfort {
+  margin-top: 30px;
+}
+.search-room__rooms {
+  margin-left: 60px;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .search-room__rooms {
+    margin-left: 0px;
+  }
+}
+.search-room__items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .search-room__items {
+    flex-direction: row;
+  }
+}
+.search-room__items-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 9px;
+}
+@media screen and (max-width: 1200px) {
+  .search-room__items-block {
+    flex-direction: column;
+    max-width: 50%;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .search-room__items-block {
+    justify-content: center;
+    align-items: center;
+  }
+  .search-room__items-block .search-room__item:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .search-room__items-block {
+    max-width: 100%;
+  }
+}
+.search-room__items-block:first-child {
+  margin-top: 0px;
+}
+.search-room__item-content {
+  display: block;
+}
+.search-room__pagination {
+  margin: 0 auto;
+  margin-top: 41px;
+}
+
+.filter-sign {
+  display: none;
+  align-items: center;
+  margin-top: 10px;
+  color: #333;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-left: auto;
+}
+@media screen and (max-width: 900px) {
+  .filter-sign {
+    display: flex;
+  }
+}
+.filter-sign img {
+  width: 17px;
+  margin-right: 10px;
+}
+
+.room-details {
+  font-family: "Montserrat";
+  border-bottom: 1px solid #dedee3;
+  padding-bottom: 70px;
+}
+@media screen and (max-width: 620px) {
+  .room-details {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details h2 {
+    text-align: center;
+  }
+}
+.room-details img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.room-details__content {
+  margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+  }
+}
+.room-details__images {
+  display: flex;
+  justify-content: center;
+}
+.room-details__images-block {
+  display: flex;
+  flex-direction: column;
+}
+.room-details__images-block:last-child img:last-child {
+  margin-top: -1px;
+}
+.room-details__smiles {
+  padding: 25px 0;
+}
+.room-details__smiles:last-child {
+  border-bottom: 0px;
+}
+.room-details__inner-block {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__inner-block {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details__inner-block {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.room-details__block:first-child {
+  width: 61%;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__block:first-child {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+.room-details__block:last-child {
+  width: 33%;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__block:last-child {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .room-details__booking {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details__booking {
+    padding: 35px 20px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details__booking-price {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details__booking-info {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .room-details__booking-dates .dropdown-block {
+    min-width: 130px;
+  }
+}
+.room-details__impression {
+  color: #BC9CFF;
+  font-style: normal;
+  font-weight: 700;
+  width: 44%;
+  margin-right: 35px;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__impression {
+    width: auto;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details__impression {
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+}
+.room-details__impression-img {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.room-details__impression-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.room-details__impression-text span {
+  display: block;
+  text-align: center;
+}
+.room-details__impression-text span:first-child {
+  font-size: 24px;
+}
+.room-details__impression-text span:last-child {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+.room-details__impression-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 400;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__impression-info {
+    margin-left: 15px;
+  }
+}
+.room-details__impression-info-block {
+  display: flex;
+  margin-top: 11px;
+}
+.room-details__impression-info-block:first-child {
+  margin-top: 0px;
+}
+.room-details__impression-info-block span:first-child {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+.room-details__impression-info_yellow {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.room-details__impression-info_green {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.room-details__impression-info_purple {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.room-details__impression-info_black {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+.room-details__impression-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.room-details__reviews {
+  margin-top: 8px;
+}
+@media screen and (max-width: 1200px) {
+  .room-details__reviews h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 620px) {
+  .room-details__reviews {
+    margin-top: 60px;
+  }
+}
+.room-details__reviews-block:last-child {
+  margin-top: 22px;
+}
+.room-details__reviews .all-styles {
+  width: 100%;
+  margin-left: 19px;
+}
+.room-details__reviews-content {
+  margin-top: 20px;
+}
+.room-details__reviews-img img {
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+}
+.room-details__rules {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+@media screen and (max-width: 620px) {
+  .room-details__rules {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.room-details__bullet {
+  width: 100%;
+}
+.room-details__bullet-wrapper {
+  margin-top: 15px;
+}
+.room-details__bullet h2 {
+  margin-left: 20px;
+}
+@media screen and (max-width: 620px) {
+  .room-details__bullet h2 {
+    margin-left: 0px;
+    text-align: left;
+  }
+}
+.room-details__bullet-elem {
+  margin-top: 12px;
+}
+.room-details__cancel {
+  max-width: 49%;
+}
+@media screen and (max-width: 620px) {
+  .room-details__cancel {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  .room-details__cancel h2 {
+    text-align: left;
+  }
+}
+.room-details__cancel-text {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }

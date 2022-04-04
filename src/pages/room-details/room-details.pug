@@ -1,0 +1,181 @@
+extends ../../blocks/template/template.pug
+
+block title
+    title Сведения о номере
+block content
+    section.room-details
+        .room-details__images
+            .room-details__images-block
+                img(src="assets/images/room-details-1.jpg", alt="")
+            .room-details__images-block
+                img(src="assets/images/room-details-2.jpg", alt="")
+                img(src="assets/images/room-details-3.jpg", alt="")
+        .container__content
+            .room-details__content
+                .room-details__block
+                    .room-details__inner-block
+                        .room-details__details
+                            h2.h2-styles Сведения о номере
+                            .room-details__smiles.smiles-block
+                                .smiles-block__img
+                                    img(src="assets/images/comfort.svg", alt="")
+                                .smiles-block__text
+                                    h3.smiles-block__h3 Комфорт
+                                    p.smiles-block__p Шумопоглощающие стены
+                            .room-details__smiles.smiles-block
+                                .smiles-block__img
+                                    img(src="assets/images/house.svg", alt="")
+                                .smiles-block__text
+                                    h3.smiles-block__h3 Удобство
+                                    p.smiles-block__p Окно в каждой из спален
+                            .room-details__smiles.smiles-block
+                                .smiles-block__img
+                                    img(src="assets/images/whatshot.svg", alt="")
+                                .smiles-block__text
+                                    h3.smiles-block__h3 Уют
+                                    p.smiles-block__p Номер оснащён камином
+                        .room-details__impression
+                            h2.h2-styles Впечатления от номера
+                            .room-details__impression-content
+                                .room-details__impression-img
+                                    img(src="assets/images/room-details-circle.svg", alt="")
+                                    .room-details__impression-text
+                                        span 260
+                                        span голосов
+                                .room-details__impression-info
+                                    .room-details__impression-info-block
+                                        span.room-details__impression-info_yellow
+                                        span Великолепно
+                                    .room-details__impression-info-block
+                                        span.room-details__impression-info_green
+                                        span Хорошо
+                                    .room-details__impression-info-block
+                                        span.room-details__impression-info_purple
+                                        span Удовлетворительно
+                                    .room-details__impression-info-block
+                                        span.room-details__impression-info_black
+                                        span Разочарован
+                    .room-details__inner-block
+                        .room-details__reviews
+                            h2.h2-styles Отзывы посетителей номера
+                            .room-details__reviews-content
+                                .room-details__reviews-block.comments-block
+                                    .comments-block__info
+                                        .comments-block__img.room-details__reviews-img
+                                            img(src="assets/images/murad.png", alt="")  
+                                        .comments-block__name
+                                            h3.comments-block__h3 Мурад Сарафанов
+                                            span.comments-block__days 5 дней назад
+                                    .comments-block__comment
+                                        button.like-btns__block.active
+                                            div.like-btns_svg
+                                            span.like-btns__count 12
+                                        p.all-styles.
+                                            Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
+                                            И стены, действительно, шумоподавляющие. 
+                                            Выкрикивал комплименты повару — никто не жаловался из соседей.
+                                .room-details__reviews-block.comments-block
+                                    .comments-block__info
+                                        .comments-block__img.room-details__reviews-img
+                                            img(src="assets/images/patrisia.png", alt="")  
+                                        .comments-block__name
+                                            h3.comments-block__h3 Патрисия Стёклышкова
+                                            span.comments-block__days Неделю назад
+                                    .comments-block__comment
+                                        button.like-btns__block
+                                            div.like-btns_svg
+                                            span.like-btns__count 2
+                                        p.all-styles.
+                                            Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, 
+                                            каждый день новое блюдо и десерт как комплимент
+                    .room-details__inner-block
+                        .room-details__rules
+                            .room-details__bullet.bullet-list
+                                h2.h2-styles Правила
+                                .bullet-list__wrapper.room-details__bullet-wrapper
+                                    .bullet-list__elem.room-details__bullet-elem
+                                        .bullet-list__dot
+                                        span.all-styles.bullet-list__text Нельзя с питомцами
+                                    .bullet-list__elem.room-details__bullet-elem
+                                        .bullet-list__dot
+                                        span.all-styles.bullet-list__text Без вечеринок и мероприятий
+                                    .bullet-list__elem.room-details__bullet-elem
+                                        .bullet-list__dot
+                                        span.all-styles.bullet-list__text Время прибытия — после 13:00,<br> а выезд до 12:00
+                            .room-details__cancel
+                                h2.h2-styles Отмена
+                                p.room-details__cancel-text.
+                                    Бесплатная отмена в течение 48 ч. После<br>
+                                    этого при отмене не позднее чем за 5 дн. до
+                                    прибытия вы получите полный возврат за 
+                                    вычетом сбора за услуги.
+
+                .room-details__block
+                    .room-details__booking.booking
+                        .booking__top
+                            .booking__top-block
+                                div № <span>888</span> <span>люкс</span>
+                                div 9 990P <span>в сутки</span>
+                        .booking__dates.input-date.room-details__booking-dates
+                            .booking__date
+                                h3.h3-styles прибытие
+                                .dropdown-block
+                                    input(type="button", value="19.08.2019").input.input-dropdown
+                                    img(src="assets/images/arrow.svg", alt="")
+                            .booking__date
+                                h3.h3-styles выезд
+                                .dropdown-block
+                                    input(type="button", value="23.08.2019").input.input-dropdown
+                                    img(src="assets/images/arrow.svg", alt="")  
+                        .dropdown-block__dropdown.booking__guests
+                            h3.h3-styles гости
+                            .input-block__dropdown.dropdown-block.top
+                                input(type="button", value="3 гостя").form-elements__input.input.input-dropdown
+                                img(src="assets/images/arrow.svg", alt="")
+                            .dropdown-block__selection.selection
+                                .dropdown-block__selection-wrapper
+                                    .dropdown-block__option
+                                        h3.h3-styles взрослые
+                                        .dropdown-block__option-nums
+                                            div.dropdown-block__disabled-btn -
+                                            span.h3-styles 2
+                                            div +
+                                    .dropdown-block__option
+                                        h3.h3-styles дети
+                                        .dropdown-block__option-nums
+                                            div.dropdown-block__disabled-btn -
+                                            span.h3-styles 1
+                                            div +
+                                    .dropdown-block__option
+                                        h3.h3-styles младенцы
+                                        .dropdown-block__option-nums
+                                            div.dropdown-block__disabled-btn -
+                                            span.h3-styles 0
+                                            div +
+                                    .dropdown-block__btns
+                                        .dropdown-block__use.clean очистить
+                                        .dropdown-block__use.use применить
+                        .booking__info.room-details__booking-info
+                            .booking__info-block
+                                span 9 990₽ х 4 суток
+                                span 39 960P
+                            .booking__info-block
+                                span Сбор за услуги: скидка 2 179₽
+                                <span class="booking__svg"><img src="assets/images/mark.svg"></span>
+                                span 0P
+                            .booking__info-block
+                                span Сбор за дополнительные <br> услуги
+                                <span class="booking__svg"><img src="assets/images/mark.svg"></span>
+                                span 300P
+                        .booking__price.room-details__booking-price
+                            span Итого
+                            span.dots 
+                            span 38 081P
+                        .booking__btn
+                            button.arrow-btn
+                                span Забронировать
+                                svg(viewBox="0 0 18 18")
+                                    path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
+append scripts
+    script(src="./js/components/date/date.js")
+    script(src="./js/components/form-elements/dropdown-block.js")

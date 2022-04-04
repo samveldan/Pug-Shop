@@ -7,11 +7,11 @@
     user-select: none;
     &__top {
         position: relative;
+        display: flex;
+        align-items: center;
         img {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 13px;
+            margin-left: 24px;
+            margin-right: 15px;
         }
     }
     .selection {
@@ -22,7 +22,7 @@
             margin-top: 15px;
         }
         img {
-            transform: translateY(-50%) rotate(180deg)
+            transform: rotate(180deg)
         }
     }
 }
