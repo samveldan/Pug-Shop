@@ -40,6 +40,9 @@
     }
     &__block {
         position: relative;
+        @media screen and (max-width: 576px) {
+            width: 50%;
+        }
         &:last-child {
             margin-left: 20px;
         }

@@ -34,6 +34,7 @@ fs.readdirSync(pages).forEach((page) => {
   });
 
 module.exports = {
+    target : "web",
     context : path.resolve(__dirname, "src"),
     mode : "development",
     entry : {
@@ -70,9 +71,11 @@ module.exports = {
     },
     devServer : {
         static: {
-            directory: path.join(__dirname, 'src'),
+            directory: path.join(__dirname, 'dist'),
           },
-        port : 5500
+        port : 5500,
+        hot: false,
+        open: true
     },
     plugins : templates.concat(plugins),
     module : {
