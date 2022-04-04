@@ -15,7 +15,7 @@
   \****************************************/
 /***/ (() => {
 
-eval("var filterBtn = document.querySelector(\".filter-sign\");\nvar filterMenu = document.querySelector(\".search-room__filters\");\nwindow.addEventListener(\"click\", function (e) {\n  if (e.target.closest(\".filter-sign\")) {\n    filterBtn.classList.toggle(\"active\");\n    filterMenu.classList.toggle(\"active\");\n  } else if (!e.target.closest(\".search-room__filters\") && !e.target.closest(\".air-datepicker\")) {\n    filterBtn.classList.remove(\"active\");\n    filterMenu.classList.remove(\"active\");\n  }\n});\n\n//# sourceURL=webpack:///./js/components/filter/filter.js?");
+eval("var filterBtn = document.querySelector(\".filter-sign\");\nvar filterMenu = document.querySelector(\".search-room__filters\");\nwindow.addEventListener(\"click\", function (e) {\n  if (e.target.closest(\".filter-sign\")) {\n    filterBtn.classList.toggle(\"active\");\n    filterMenu.classList.toggle(\"active\");\n  }\n});\nwindow.addEventListener(\"touchend\", function (e) {\n  if (!e.target.closest(\".search-room__filters\") && !e.target.closest(\".air-datepicker\")) {\n    filterBtn.classList.remove(\"active\");\n    filterMenu.classList.remove(\"active\");\n  }\n});\n\n//# sourceURL=webpack:///./js/components/filter/filter.js?");
 
 /***/ })
 

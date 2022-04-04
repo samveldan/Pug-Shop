@@ -1330,11 +1330,7 @@ label {
 @media screen and (max-width: 576px) {
   .input {
     padding: 10px 14px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .input {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 .input:hover {
@@ -1452,6 +1448,11 @@ label {
 }
 .radio-btns__block {
   position: relative;
+}
+@media screen and (max-width: 576px) {
+  .radio-btns__block {
+    width: 50%;
+  }
 }
 .radio-btns__block:last-child {
   margin-left: 20px;
@@ -1888,7 +1889,7 @@ label {
   align-items: center;
 }
 .expand-checkbox__top img {
-  margin-left: 24px;
+  margin-left: auto;
   margin-right: 15px;
 }
 .expand-checkbox .selection {
@@ -2147,6 +2148,19 @@ label {
   max-width: 380px;
   padding: 35px 30px;
 }
+.find-room__date input {
+  max-width: 150px;
+}
+@media screen and (max-width: 576px) {
+  .find-room__date input {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .find-room__date:last-child {
+    margin-left: 10px;
+  }
+}
 @media screen and (max-width: 576px) {
   .find-room {
     max-width: 90%;
@@ -2331,6 +2345,19 @@ label {
 }
 .booking__btn button {
   width: 100%;
+}
+.booking__date input {
+  max-width: 150px;
+}
+@media screen and (max-width: 576px) {
+  .booking__date input {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .booking__date:last-child {
+    margin-left: 10px;
+  }
 }
 
 .signin {
@@ -2860,6 +2887,8 @@ label {
   width: 35px;
   height: 25px;
   position: relative;
+  border: 0;
+  background: transparent;
 }
 .burger div {
   position: absolute;
@@ -3007,6 +3036,7 @@ label {
   background-image: url("../assets/images/landing-page-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 }
 .main__content {
   padding: 70px 0px 380px 0px;
@@ -3036,16 +3066,12 @@ label {
 .main_small-text p {
   line-height: 24px;
 }
-@media screen and (max-width: 576px) {
-  .main_small-text p {
-    color: #fff;
-  }
-}
 
 .sign-in {
   background-image: url("../assets/images/auth-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   padding: 172px 0px;
 }
 @media screen and (max-width: 992px) {
@@ -3069,6 +3095,7 @@ label {
   background-image: url("../assets/images/auth-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   padding: 20px 0px;
 }
 .sign-up__block {
@@ -3210,6 +3237,8 @@ label {
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin-left: auto;
+  background-color: transparent;
+  border: 0;
 }
 @media screen and (max-width: 900px) {
   .filter-sign {

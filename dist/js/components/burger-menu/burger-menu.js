@@ -15,7 +15,7 @@
   \**************************************************/
 /***/ (() => {
 
-eval("var burger = document.querySelector(\".burger\");\nvar menu = document.querySelector(\".burger-menu\");\nwindow.addEventListener(\"click\", function (e) {\n  if (e.target.closest(\".burger\")) {\n    burger.classList.toggle(\"active\");\n    menu.classList.toggle(\"active\");\n  } else if (!e.target.closest(\".burger-menu\")) {\n    burger.classList.remove(\"active\");\n    menu.classList.remove(\"active\");\n  }\n});\n\n//# sourceURL=webpack:///./js/components/burger-menu/burger-menu.js?");
+eval("var burger = document.querySelector(\".burger\");\nvar menu = document.querySelector(\".burger-menu\");\nwindow.addEventListener(\"click\", function (e) {\n  if (e.target.closest(\".burger\")) {\n    burger.classList.toggle(\"active\");\n    menu.classList.toggle(\"active\");\n  }\n});\nwindow.addEventListener(\"touchend\", function (e) {\n  if (!e.target.closest(\".burger-menu\")) {\n    burger.classList.remove(\"active\");\n    menu.classList.remove(\"active\");\n  }\n});\n\n//# sourceURL=webpack:///./js/components/burger-menu/burger-menu.js?");
 
 /***/ })
 
