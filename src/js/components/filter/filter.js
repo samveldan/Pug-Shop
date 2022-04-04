@@ -6,7 +6,10 @@ window.addEventListener("click", (e) => {
         filterBtn.classList.toggle("active");
         filterMenu.classList.toggle("active");
     }
-    else if(!e.target.closest(".search-room__filters") && !e.target.closest(".air-datepicker")) {
+});
+
+window.addEventListener("touchend", (e) => {
+    if(!e.target.closest(".search-room__filters") && !e.target.closest(".air-datepicker")) {
         filterBtn.classList.remove("active");
         filterMenu.classList.remove("active");
     }

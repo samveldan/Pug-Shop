@@ -6,7 +6,10 @@ window.addEventListener("click", (e) => {
         burger.classList.toggle("active");
         menu.classList.toggle("active");
     }
-    else if(!e.target.closest(".burger-menu")) {
+});
+
+window.addEventListener("touchend", (e) => {
+    if(!e.target.closest(".burger-menu")) {
         burger.classList.remove("active");
         menu.classList.remove("active");
     }

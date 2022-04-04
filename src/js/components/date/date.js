@@ -51,6 +51,7 @@ datesBlocks.forEach((element) => {
             content: 'Применить',
             className : "date-use",
             onClick : function() {
+                console.log();
                 let containsDate = element.classList.contains("search-date");
 
                 if(currentDates.length > 1 && !containsDate) {

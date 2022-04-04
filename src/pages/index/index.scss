@@ -2,6 +2,7 @@
     background-image: url("../assets/images/landing-page-bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
     &__content {
         padding: 70px 0px 380px 0px;
         position: relative;
@@ -24,9 +25,6 @@
         color: rgba(31, 32, 65, 0.75);
         p {
             line-height: 24px;
-            @media screen and (max-width: 576px) {
-                color: #fff;
-            }
         }
     }
 }
