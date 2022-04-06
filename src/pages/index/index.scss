@@ -13,6 +13,14 @@
             padding: 50px 0px 200px 0px;
         }
     }
+    .input-date {
+        .input-dropdown {
+            background-image: url("../assets/images/arrow.svg");
+            background-repeat: no-repeat;
+            background-position-x: 90%;
+            background-position-y: center;
+        }
+    }
     &_small-text {
         position: absolute;
         bottom: 18px;

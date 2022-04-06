@@ -1352,6 +1352,7 @@ label {
   color: rgba(31, 32, 65, 0.75);
   text-align: left;
   display: block;
+  cursor: default;
 }
 
 .sub-block {
@@ -2221,6 +2222,12 @@ label {
 .signup__date {
   margin-top: 20px;
 }
+.signup__date input {
+  background-image: url("../assets/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
+}
 .signup__info {
   margin-top: 20px;
 }
@@ -2348,6 +2355,10 @@ label {
 }
 .booking__date input {
   max-width: 150px;
+  background-image: url("../assets/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
 }
 @media screen and (max-width: 576px) {
   .booking__date input {
@@ -3052,6 +3063,12 @@ label {
     padding: 50px 0px 200px 0px;
   }
 }
+.main .input-date .input-dropdown {
+  background-image: url("../assets/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+}
 .main_small-text {
   position: absolute;
   bottom: 18px;
@@ -3222,6 +3239,12 @@ label {
 .search-room__pagination {
   margin: 0 auto;
   margin-top: 41px;
+}
+.search-room__dates input {
+  background-image: url("../assets/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
 }
 
 .filter-sign {

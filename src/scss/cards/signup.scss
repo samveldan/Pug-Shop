@@ -16,6 +16,12 @@
     }
     &__date {
         margin-top: 20px;
+        input {
+            background-image: url("../assets/images/arrow.svg");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: center;
+        }
     }
     &__info {
         margin-top: 20px;

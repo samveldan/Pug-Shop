@@ -48,21 +48,21 @@
   <section class="sign-in">
     <div class="container__content">
       <div class="sign-in__content">
-        <div class="sign-in__block signin">
+        <form class="sign-in__block signin" method="get">
           <h1 class="h1-styles">Войти</h1>
           <div class="signin__auth">
-            <input class="input" placeholder="Email">
-            <input class="input" placeholder="Пароль">
+            <input class="input" type="email" placeholder="Email" name="email">
+            <input class="input" type="password" placeholder="Пароль" name="password">
           </div>
           <div class="signin__btn">
-            <button class="arrow-btn"><span>Войти</span>
+            <button class="arrow-btn" type="submit"><span>Войти</span>
               <svg viewBox="0 0 18 18">
                 <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"></path>
               </svg>
             </button>
           </div>
           <div class="check-account signin__check"><span>Нет аккаунта на Toxin?</span><a class="buttons-block_third" href="sign-up.html">создать</a></div>
-        </div>
+        </form>
       </div>
     </div>
   </section>

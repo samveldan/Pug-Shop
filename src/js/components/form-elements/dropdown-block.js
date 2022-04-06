@@ -5,6 +5,13 @@ class Dropdown {
         this.setListener(this.blocks);
         this.setOpenItems(this.blocks);
         this.setBtnListeners(this.blocks);
+        this.guests = null;
+
+        this.adults = ["гость", "гостя", "гостей"];
+        this.newborns = ["младенец", "младенца", "младенцев"];
+        this.beds = ["спальня", "спальни", "спален"];
+        this.sofas = ["кровать", "кровати", "кроватей"];
+        this.baths = ["ванна","ванны", "ванн"];
 
         this.blocks.forEach(fullBlock => {
             this.removeCleanBtn(fullBlock, this.checkUseBtn(fullBlock));
@@ -56,16 +63,17 @@ class Dropdown {
         blocks.forEach(block => {
             if(block.querySelector(".dropdown-block__option-nums")) {
                 let nums = block.querySelectorAll(".dropdown-block__option-nums");
+                let standardTitle = block.querySelector(".input-dropdown").value;
 
                 nums.forEach(element => {
                     let minusBtn = element.querySelector("div:first-child");
                     let plusBtn = element.querySelector("div:last-child");
                     
                     minusBtn.addEventListener("click", (e) => {
-                        this.changeNums(e.target);
+                        this.changeNums(e.target, standardTitle);
                     });
                     plusBtn.addEventListener("click", (e) => {
-                        this.changeNums(e.target);
+                        this.changeNums(e.target, standardTitle);
                         minusBtn.classList.remove("dropdown-block__disabled-btn");
                     });
                 });
@@ -73,7 +81,7 @@ class Dropdown {
         });
     }
 
-    changeNums(item) {
+    changeNums(item, sTitle) {
         let parent = item.parentElement;
         let text = parent.querySelector("span");
         let fullBlock = parent.closest(".dropdown-block__dropdown");
@@ -89,24 +97,25 @@ class Dropdown {
 
         this.removeCleanBtn(fullBlock, this.checkUseBtn(fullBlock));
 
-        title.value = this.getTitles(fullBlock);
+        title.value = this.getTitles(fullBlock, sTitle);
     }
 
     checkUseBtn(parent) {
         return parent.querySelector(".dropdown-block__use.use");
     }
 
-    getTitles(block) {
+    getTitles(block, sTitle) {
         let options = block.querySelectorAll(".dropdown-block__option");
         let text = [];
-        let guests = 0;
+        let isEmpty = true;
+        this.guests = 0;
 
         options.forEach(element => {
             let guestTitle = element.querySelector("h3").innerText.toLowerCase();
             let guestNum = element.querySelector("span").innerText;
             
             if(guestTitle == "взрослые" || guestTitle == "дети")  {
-                guests += parseInt(guestNum);
+                this.guests += parseInt(guestNum);
             }
         });
 
@@ -116,12 +125,44 @@ class Dropdown {
             
             if(parseInt(num) != 0) {
                 if(title == "взрослые" || title == "дети")  {
-                    title = "гостя";
-                    num = guests;
+                    if(this.guests == 1) title = this.adults[0];
+                    else if(this.guests > 1 && this.guests < 5) title = this.adults[1];
+                    else(title = this.adults[2]);
+                    num = this.guests;
                 }
+                else if(title == "младенцы") {
+                    if(num == 1) title = this.newborns[0];
+                    else if(num > 1 && num < 5) title = this.newborns[1];
+                    else(title = this.newborns[2]);
+                }
+                else if(title == "спальни") {
+                    if(num == 1) title = this.beds[0];
+                    else if(num > 1 && num < 5) title = this.beds[1];
+                    else(title = this.beds[2]);
+                }
+                else if(title == "кровати") {
+                    if(num == 1) title = this.sofas[0];
+                    else if(num > 1 && num < 5) title = this.sofas[1];
+                    else(title = this.sofas[2]);
+                }
+                else if(title == "ванные комнаты") {
+                    if(num == 1) title = this.baths[0];
+                    else if(num > 1 && num < 5) title = this.baths[1];
+                    else(title = this.baths[2]);
+                }
+
                 text.push(`${num} ${title}`);
             }
         });
+
+        options.forEach(element => {
+            let num = element.querySelector("span").innerText;
+            
+            if(num != 0) isEmpty = false;
+        });
+
+        if(isEmpty) text.push(sTitle);
+
         text = text.filter((item, index, array) => {
             return array.indexOf(item) == index;
         }).join(", ");

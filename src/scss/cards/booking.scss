@@ -103,6 +103,10 @@
     &__date {
         input {
             max-width: 150px;
+            background-image: url("../assets/images/arrow.svg");
+            background-repeat: no-repeat;
+            background-position-x: 90%;
+            background-position-y: center;
             @media screen and (max-width: 576px) {
                 max-width: 100%;
             }

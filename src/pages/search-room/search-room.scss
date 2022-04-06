@@ -110,6 +110,14 @@
         margin: 0 auto;
         margin-top: 41px;
     }
+    &__dates {
+        input {
+            background-image: url("../assets/images/arrow.svg");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: center;
+        }
+    }
 }
 
 .filter-sign {
