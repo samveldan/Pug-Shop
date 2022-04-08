@@ -22,6 +22,8 @@ block content
                         h3.h3-styles дата рождения
                         .dropdown-block.input-date
                             input(type="text", value="ДД.ММ.ГГ" readonly, name="birthday").input.input-dropdown
+                        .calendar
+                            input(type="hidden")
                     .signup__info
                         h3.h3-styles данные для входа в сервис
                         input(placeholder="Email", name="email").input
@@ -37,4 +39,4 @@ block content
                         span Уже есть аккаунт на Toxin
                         a(href="sign-in.html").buttons-block_third войти
 append scripts
-    script(src="./js/components/date/date.js")
+    script(src="./js/pages/sign-up/sign-up.js")

@@ -1,9 +1,15 @@
+.calendar {
+    position: relative;
+}
 .air-datepicker {
     font-family: 'Montserrat';
     padding: 0 10px;
     width: 320px - 24px;
     --adp-day-cell-height: 40px;
     z-index: 10000;
+    top: 0 !important;
+    left: 0 !important;
+    margin-top: 10px;
     @media screen and (max-width: 576px) {
         width: 269px;
         --adp-day-cell-height: 32px;
@@ -78,6 +84,9 @@
         font-size: 12px;
         &.-day-.-other-month- {
             color: rgba(31, 32, 65, 0.25);
+        }
+        &.-day-.-disabled-.-focus- {
+            color: #fff;
         }
         &.-selected-,&.-selected-.-focus- {
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);

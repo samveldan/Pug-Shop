@@ -12,6 +12,8 @@ block content
                         .input-block__dropdown.dropdown-block
                             input(type="text", value="19 авг - 23 авг" readonly).input.input-dropdown
                             input(type="hidden")
+                        .calendar
+                            input(type="hidden")
                     .dropdown-block__dropdown.search-room__guests
                         h3.h3-styles гости
                         .input-block__dropdown.dropdown-block.dropdown-block__aparts.top
@@ -518,8 +520,4 @@ block content
                                     img(src="assets/images/white-arrow.svg", alt="")
                             .pagination-block__text 1 – 12 из 100+ вариантов аренды
 append scripts
-    script(src="./js/components/cards/slider.js")
-    script(src="./js/components/date/date.js")
-    script(src="./js/components/form-elements/dropdown-block.js")
-    script(src="./js/components/form-elements/range-slider.js")
-    script(src="./js/components/filter/filter.js")
+    script(src="./js/pages/search-room/search-room.js")

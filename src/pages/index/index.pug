@@ -17,6 +17,8 @@ block content
                             h3.h3-styles выезд
                             .dropdown-block
                                 input(type="text", value="ДД.ММ.ГГ" readonly).input.input-dropdown
+                    .calendar
+                        input(type="hidden")
                     .dropdown-block__dropdown.find-room__guests
                         h3.h3-styles гости
                         .input-block__dropdown.dropdown-block.top
@@ -53,5 +55,4 @@ block content
                 .main_small-text
                     p Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
 append scripts
-    script(src="js/components/date/date.js")
-    script(src="js/components/form-elements/dropdown-block.js")
+        script(src="./js/pages/index/index.js")

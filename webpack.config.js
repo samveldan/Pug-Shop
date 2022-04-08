@@ -39,29 +39,25 @@ module.exports = {
     mode : "development",
     entry : {
         main : "./index.js",
-        date : {
-            import : "./js/components/date/date.js",
-            filename : "./js/components/date/date.js"
+        index : {
+            import : "./pages/index/index.js",
+            filename : "./js/pages/index/index.js"
         },
-        dropdownBlock : {
-            import : "./js/components/form-elements/dropdown-block.js",
-            filename : "./js/components/form-elements/dropdown-block.js"
+        roomDetails : {
+            import : "./pages/room-details/room-details.js",
+            filename : "./js/pages/room-details/room-details.js"
         },
-        slider : {
-            import : "./js/components/cards/slider.js",
-            filename : "./js/components/cards/slider.js"
+        searchRoom : {
+            import : "./pages/search-room/search-room.js",
+            filename : "./js/pages/search-room/search-room.js"
         },
-        rangeSldier : {
-            import : "./js/components/form-elements/range-slider.js",
-            filename : "./js/components/form-elements/range-slider.js"
+        signIn : {
+            import : "./pages/sign-in/sign-in.js",
+            filename : "./js/pages/sign-in/sign-in.js"
         },
-        burgerMenu : {
-            import : "./js/components/burger-menu/burger-menu.js",
-            filename : "./js/components/burger-menu/burger-menu.js"
-        },
-        filter : {
-            import : "./js/components/filter/filter.js",
-            filename : "./js/components/filter/filter.js"
+        signUp : {
+            import : "./pages/sign-up/sign-up.js",
+            filename : "./js/pages/sign-up/sign-up.js"
         }
     },
     output : {
